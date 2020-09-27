@@ -1,0 +1,443 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- 此资源所引用的内容都将作为指南的一部分生成。持续更新中 -->
+<ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas/R5/fhir-single.xsd">
+	<id value="SC-Regional-Diagnosis-IG"/>
+	<!--  <extension url="http://hl7.org/fhir/tools/StructureDefinition/igpublisher-spreadsheet">
+    <valueString value="resources-spreadsheet.xml"/>
+  </extension>-->
+	<url value="http://press.hl7fhir.cn/ImplementationGuide/SC-Regional-Diagnosis-R4"/>
+	<!-- 此实施指南的版本。除非指定了 "propagate-version" 扩展元素，否则所有引用资源都将继承此版本号 -->
+	<version value="0.0.2"/>
+	<name value="SC Regional Diagnosis IG"/>
+	<title value="四川省区域诊疗实施指南"/>
+	<status value="draft"/>
+	<experimental value="true"/>
+	<publisher value="HL7FHIR.CN" />
+	<contact>
+		<telecom>
+			<system value="url"/>
+			<value value="https://www.hl7fhir.cn"/>
+		</telecom>
+		<telecom>
+			<system value="email"/>
+			<value value="contact@hl7fhir.cn"/>
+		</telecom>
+	</contact>
+	<description value="四川省区域诊疗实施指南是[中国核心实施指南](http://build.fhir.org/ig/HL7China/CN-CORE-R4/)规范集中的一个子规范。
+它基于核心指南定义了四川省公共区域诊疗信息化所涉及的通用资源与常用场景，它与其它子规范一起组成了中国核心指南的规范集。"/>
+	<jurisdiction>
+		<coding>
+			<system value="http://CodeSystem.hl7fhir.cn/countries-and-regions"/>
+			<code value="156"/>
+		</coding>
+		<text value="中国"/>
+	</jurisdiction>
+	<packageId value="hl7fhir.cn.core.r4.public-health.sc" />
+	<!-- 参见 https://spdx.org/licenses/AGPL-3.0-or-later.html -->
+	<license value="AGPL-3.0-or-later" />
+	<!-- 实施指南里的内容是基于FHIR R4版本的 -->
+	<fhirVersion value="4.0.1"/>
+	<definition>
+		<!--0..* 生成IG需求信息。其中grouping节点可由IGPublisher自动定义，也可手动定义个性化需求。 -->
+
+		
+		<resource>
+			<reference>
+				<!-- 本地资源定义（LaboratoryRequest） -->
+				<reference value="StructureDefinition/laboratory-request"/>
+			</reference>
+			<description value="描述医院内 临床医生对患者提交实验室检验申请的资源。"/>
+		</resource>
+
+		<resource>
+			<reference>
+				<!-- 本地资源定义（LaboratoryReport） -->
+				<reference value="StructureDefinition/laboratory-report"/>
+			</reference>
+			<description value="对患者、患者组从中提取的标本进行的诊断试验的结果和解释。此报告包括了临床场景（如申请单、提供者信息），有些报告将单项指标结果、图像、文本和带编码的解释、以及带格式的诊断报告"/>
+		</resource>
+
+		<resource>
+			<reference>
+				<!-- 本地资源定义（LaboratoryRoutineObservation） -->
+				<reference value="StructureDefinition/laboratory-routine-observation"/>
+			</reference>
+			<description value="描述实验室常规检验的详细检验结果的反馈，如 生化检验、血液检验、临检检验。"/>
+		</resource>
+
+		<resource>
+			<reference>
+				<!-- 本地资源定义（LaboratorySpecimen） -->
+				<reference value="StructureDefinition/laboratory-specimen"/>
+			</reference>
+			<description value="在医院实验室检验中，用于分析的样品。"/>
+		</resource>
+		
+		
+		<!--<resource>
+<reference>
+<reference value="MyLogicalModel/AS"/>
+</reference>
+</resource> -->
+
+		<resource>
+			<reference>
+				<!-- 资源示例 -->
+				<reference value="ServiceRequest/LaboratoryRequest-example"/>
+			</reference>
+			<name value="实验室检验申请示例"/>
+			<description value="演示如何定义和引用实验室检验申请的简单示例"/>
+			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/laboratory-request"/>
+		</resource>
+
+
+		<resource>
+			<reference>
+				<!-- 资源示例 -->
+				<reference value="DiagnosticReport/LaboratoryReport-example"/>
+			</reference>
+			<name value="实验室检验报告示例"/>
+			<description value="演示如何定义和引用实验室检验报告的简单示例"/>
+			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/laboratory-report"/>
+		</resource>
+		
+		
+		
+		<resource>
+			<reference>
+				<!-- 资源示例 -->
+				<reference value="Task/LaboratoryReportRelease-example"/>
+			</reference>
+			<name value="发布实验室检验报告示例"/>
+			<description value="演示如何定义和引用发布实验室检验报告的简单示例"/>
+			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Task"/>
+		</resource>
+
+		<resource>
+			<reference>
+				<!-- 资源示例 -->
+				<reference value="Specimen/LaboratorySpecimen001-example"/>
+			</reference>
+			<name value="实验室检验标本示例"/>
+			<description value="演示如何定义和引用实验室检验标本的简单示例"/>
+			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/laboratory-specimen"/>
+		</resource>
+		
+		<resource>
+			<reference>
+				<!-- 资源示例 -->
+				<reference value="Observation/LaboratoryRoutineObservation001-example"/>
+			</reference>
+			<name value="红细胞观测结果示例"/>
+			<description value="演示如何定义和引用红细胞观测结果的简单示例"/>
+			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/laboratory-routine-observation"/>
+		</resource>
+		
+		<resource>
+			<reference>
+				<!-- 资源示例 -->
+				<reference value="Observation/LaboratoryRoutineObservation002-example"/>
+			</reference>
+			<name value="白细胞观测结果示例"/>
+			<description value="演示如何定义和引用白细胞观测结果的简单示例"/>
+			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/laboratory-routine-observation"/>
+		</resource>
+		
+		<resource>
+			<reference>
+				<!-- 资源示例 -->
+				<reference value="Observation/LaboratoryRoutineObservation003-example"/>
+			</reference>
+			<name value="血小板观测结果示例"/>
+			<description value="演示如何定义和引用白细胞观测结果的简单示例"/>
+			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/laboratory-routine-observation"/>
+		</resource>
+		
+		
+		<resource>
+			<reference>
+				<!-- ActivityDefinition资源示例 -->
+				<reference value="ActivityDefinition/ad-laboratory-request"/>
+			</reference>
+			<name value="实验室检验申请ActivityDefinition示例"/>
+			<description value="演示如何定义和引用实验室检验申请ActivityDefinition的简单示例"/>
+			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/ActivityDefinition"/>
+		</resource>
+
+		<resource>
+			<reference>
+				<!-- ActivityDefinition资源示例 -->
+				<reference value="ActivityDefinition/ad-laboratory-report-release"/>
+			</reference>
+			<name value="发布实验室检验报告ActivityDefinition示例"/>
+			<description value="演示如何定义和引用发布实验室检验报告ActivityDefinition的简单示例"/>
+			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/ActivityDefinition"/>
+		</resource>
+		
+		<resource>
+			<reference>
+				<!-- PlanDefinition资源示例 -->
+				<reference value="PlanDefinition/pd-regional-laboratory-inspection"/>
+			</reference>
+			<name value="住院双转的流程定义PlanDefinition示例"/>
+			<description value="演示如何定义和引用区域实验室检验的流程定义PlanDefinition的简单示例"/>
+			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/PlanDefinition"/>
+		</resource>
+
+		<resource>
+			<reference>
+				<!-- Bundle资源示例 -->
+				<reference value="Bundle/laboratory-request-example"/>
+			</reference>
+			<name value="实验室检验申请消息交换Bundle示例"/>
+			<description value="演示如何定义和引用实验室检验申请实际交互场景的数据交换Bundle示例"/>
+			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Bundle"/>
+		</resource>
+
+		
+
+		<resource>
+			<reference>
+				<!-- Bundle资源示例 -->
+				<reference value="Bundle/laboratory-report-release-example"/>
+			</reference>
+			<name value="发布实验室检验报告消息交换Bundle示例"/>
+			<description value="演示如何定义和引用发布实验室检验报告实际交互场景的数据交换Bundle示例"/>
+			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Bundle"/>
+		</resource>
+				
+		<resource>
+			<reference>
+				<!-- Bundle-RESTful资源示例 -->
+				<reference value="Bundle/laboratory-request-RESTful-example"/>
+			</reference>
+			<name value="实验室检验申请RESTful接口的Bundle示例"/>
+			<description value="演示如何定义和引用实验室检验申请实际交互场景的RESTful数据交换Bundle示例"/>
+			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Bundle"/>
+		</resource>
+
+		
+
+		<resource>
+			<reference>
+				<!-- Bundle资源示例 -->
+				<reference value="Bundle/laboratory-report-release-RESTful-example"/>
+			</reference>
+			<name value="发布实验室检验报告RESTful接口的Bundle示例"/>
+			<description value="演示如何定义和引用发布实验室检验报告实际交互场景的RESTful数据交换Bundle示例"/>
+			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Bundle"/>
+		</resource>
+		
+		<resource>
+			<reference>
+				<!-- MessageDefinition资源示例 -->
+				<reference value="MessageDefinition/md-laboratory-request"/>
+			</reference>
+			<name value="实验室检验申请消息定义MessageDefinition的示例"/>
+			<description value="演示如何定义和引用实验室检验申请消息定义MessageDefinition的示例"/>
+			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/MessageDefinition"/>
+		</resource>
+
+		
+
+		<resource>
+			<reference>
+				<!-- MessageDefinition资源示例 -->
+				<reference value="MessageDefinition/md-laboratory-report-release"/>
+			</reference>
+			<name value="发布实验室检验报告消息定义MessageDefinition的示例"/>
+			<description value="演示如何定义和引用发布实验室检验报告消息定义MessageDefinition的示例"/>
+			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/MessageDefinition"/>
+		</resource>
+		
+		<resource>
+			<reference>
+				<!-- Organization资源示例 -->
+				<reference value="Organization/Department001-example"/>
+			</reference>
+			<name value="科室的示例"/>
+			<description value="演示如何定义和引用科室的示例"/>
+		</resource>
+		
+		<resource>
+			<reference>
+				<!-- Organization资源示例 -->
+				<reference value="Organization/EndemicArea001-example"/>
+			</reference>
+			<name value="病区的示例"/>
+			<description value="演示如何定义和引用病区的示例"/>
+		</resource>
+		
+		<resource>
+			<reference>
+				<!-- Organization资源示例 -->
+				<reference value="Encounter/EncounterHospitalized001-example"/>
+			</reference>
+			<name value="医疗事件-住院的示例"/>
+			<description value="演示如何定义和引用医疗事件-住院的示例"/>
+		</resource>
+		
+		<resource>
+			<reference>
+				<!-- Organization资源示例 -->
+				<reference value="Location/HospitalBed001-example"/>
+			</reference>
+			<name value="床位的示例"/>
+			<description value="演示如何定义和引用床位的示例"/>
+		</resource>
+		
+		<resource>
+			<reference>
+				<!-- Patient资源示例 -->
+				<reference value="Patient/Patient001-example"/>
+			</reference>
+			<name value="患者张三的示例"/>
+			<description value="演示如何定义和引用患者张三的示例"/>
+		</resource>
+
+		<resource>
+			<reference>
+				<!-- Practitioner资源示例 -->
+				<reference value="Practitioner/Practitioner001-example"/>
+			</reference>
+			<name value="医护人员李明明的示例"/>
+			<description value="演示如何定义和引用医护人员李明明的示例"/>
+		</resource>
+
+
+		<resource>
+			<reference>
+				<!-- Organization资源示例 -->
+				<reference value="Organization/Hospital001-example"/>
+			</reference>
+			<name value="医疗机构的示例"/>
+			<description value="演示如何定义和引用医疗机构的示例"/>
+		</resource>
+		
+		
+
+		<!--    <resource>
+      <reference>
+        <reference value="Library/example"/>
+      </reference>
+      <name value="Simple library example"/>
+      <description value="A simple example showing how library is pre-loaded"/>
+    </resource> -->
+		<page>
+			<!-- 若不指定目录页面，模板将强制为 toc.html -->
+			<nameUrl value="toc.html"/>
+			<title value="目录"/>
+			<generation value="html"/>
+			<page>
+				<nameUrl value="index.html"/>
+				<title value="首页"/>
+				<generation value="markdown"/>
+			</page>
+			<page>
+                <nameUrl value="spec.html"/>
+                <title value="规范定义"/>
+                <generation value="markdown"/>
+
+               <page>
+                   <nameUrl value="profiles.html"/>
+                   <title value="资源结构"/>
+                   <generation value="markdown"/>
+              </page>
+
+               <page>
+                  <nameUrl value="extensions.html"/>
+                  <title value="扩展元素"/>
+                  <generation value="markdown"/>
+               </page>
+
+               <page>
+                  <nameUrl value="terminology.html"/>
+                   <title value="术语编码"/>
+                  <generation value="markdown"/>
+               </page>
+
+                <page>
+                  <nameUrl value="REST.html"/>
+                  <title value="微服务API"/>
+                   <generation value="markdown"/>
+               </page>
+
+                <page>
+                   <nameUrl value="messages.html"/>
+                   <title value="消息交换"/>
+                   <generation value="markdown"/>
+              </page>
+
+           </page>
+
+<page>
+<nameUrl value="useage-scenarios.html"/>
+<title value="使用场景"/>
+<generation value="markdown"/>
+			<page>
+                 <nameUrl value="hospital-referral.html"/>
+				<title value="双向转诊-住院"/>
+				<generation value="markdown"/> 
+              </page>
+</page>
+
+			 
+
+		  	 <page>
+               <nameUrl value="downloads.html"/>
+    			<title value="下载"/>
+    			<generation value="html"/>
+ 			 </page>
+			<!-- 
+			<page>
+				<nameUrl value="changes.html"/>
+				<title value="指南历史版本"/>
+				<generation value="html"/>
+			</page>
+			-->
+		</page>
+		<!-- copyright year 是IGPublisher的强制参数 -->
+		<parameter>
+			<code value="copyrightyear"/>
+			<value value="2020+"/>
+		</parameter>
+		<!-- releaselabel should be the ballot status for HL7-published IGs. -->
+		<parameter>
+			<code value="releaselabel"/>
+			<value value="CI Build"/>
+		</parameter>
+		<parameter>
+			<code value="find-other-resources"/>
+			<value value="true"/>
+		</parameter>
+		<parameter>
+			<code value="path-resource"/>
+			<value value="input\history"/>
+		</parameter>
+		<parameter>
+			<code value="path-binary"/>
+			<value value="input\cql"/>
+		</parameter>
+		<parameter>
+			<code value="path-liquid"/>
+			<value value="templates\liquid"/>
+		</parameter>
+		<!-- Uncomment one or more of these if you want to limit which syntaxes are supported or want to disable the display of mappings
+    <parameter>
+      <code value="excludexml"/>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code value="excludejson"/>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code value="excludettl"/>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code value="excludemap"/>
+      <value value="true"/>
+    </parameter>-->
+	</definition>
+</ImplementationGuide>
