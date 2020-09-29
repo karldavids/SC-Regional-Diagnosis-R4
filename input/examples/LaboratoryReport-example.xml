@@ -96,4 +96,15 @@
 
   <!-- 0..1 检验结论文字描述 -->
   <conclusion value="患者血常规检查无异常。"/>
+
+ <!-- 0..* 真实报告，以附件形式发送 -->
+        <presentedForm>
+          <!-- 0..1 报告地址 -->
+          <url value="http://DiagnosticReport/LaboratoryReport-example.html"/>
+          <!-- 0..1 Label to display in place of the data -->
+          <title value="张三的血常规报告"/>
+          <!-- 0..1 数据创建时间 -->
+          <creation value="2019-02-10T13:00:00Z"/>
+        </presentedForm>
+
 </DiagnosticReport>
