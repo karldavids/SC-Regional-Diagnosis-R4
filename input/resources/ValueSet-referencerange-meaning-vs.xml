@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="referencerange-meaning-vs" />
+    <url value="http://ValueSet.hl7fhir.cn/referencerange-meaning-vs" />
+    <name value="referencerange-meaning-vs" />
+    <title value="参考范围的意义" />
+    <status value="draft" />
+	<description value="描述该结果的参考范围意义如 幼儿、孕期等"/>
+    <publisher value="四川省卫生与健康委员会" />
+    <jurisdiction>
+        <coding>
+            <system value="http://ValueSet.hl7fhir.cn/countries-and-regions" />
+            <code value="156" />
+        </coding>
+        <text value="中国" />
+    </jurisdiction>
+    <expansion>
+        <timestamp value="2020-07-14T16:15:38.215+08:00" />
+        <total value="4" />
+        <offset value="0" />
+        <contains>
+            <system value="http://CodeSystem.hl7fhir.cn/referencerange-meaning" />
+            <code value="normal"></code>
+      <display value="正常"></display>
+        </contains>
+        <contains>
+            <system value="http://CodeSystem.hl7fhir.cn/referencerange-meaning" />
+           <code value="mid-term"></code>
+      <display value="中期"></display>
+        </contains>
+        <contains>
+            <system value="http://CodeSystem.hl7fhir.cn/referencerange-meaning" />
+             <code value="toddler"></code>
+      <display value="幼儿"></display>
+        </contains>
+        <contains>
+            <system value="http://CodeSystem.hl7fhir.cn/referencerange-meaning" />
+             <code value="post-menopause"></code>
+      <display value="绝经后"></display>
+        </contains>
+    </expansion>
+</ValueSet>

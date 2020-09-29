@@ -6,10 +6,37 @@
  <title value="标本状态"/><!-- 0..1 Name for this value set (human friendly) -->
  <status value="draft"/><!-- 1..1 draft | active | retired | unknown -->
   <description value="描述该标本的状态，如 可用|不可用|不能令人满意|进入错误"/>
- <compose>  <!-- 0..1 Content logical definition of the value set (CLD) --> 
-  <include>  <!-- 1..* Include one or more codes from a code system or other value set(s) -->
-   <system value="http://hl7.org/fhir/specimen-status"/><!-- ?? 0..1 The system the codes come from --> 
-  </include>
-  <exclude><!-- ?? 0..* Content as for ValueSet.compose.include Explicitly exclude codes from a code system or other value sets --></exclude>
- </compose>
+  <publisher value="四川省卫生与健康委员会" />
+    <jurisdiction>
+        <coding>
+            <system value="http://ValueSet.hl7fhir.cn/countries-and-regions" />
+            <code value="156" />
+        </coding>
+        <text value="中国" />
+    </jurisdiction>
+    <expansion>
+        <timestamp value="2020-07-14T16:15:38.215+08:00" />
+        <total value="4" />
+        <offset value="0" />
+        <contains>
+            <system value="http://CodeSystem.hl7fhir.cn/specimen-status" />
+            <code value="Unsatisfactory"></code>
+      <display value="不尽人意"></display>
+        </contains>
+        <contains>
+            <system value="http://CodeSystem.hl7fhir.cn/specimen-status" />
+            <code value="unavailable"></code>
+      <display value="不可用"></display>
+        </contains>
+        <contains>
+            <system value="http://CodeSystem.hl7fhir.cn/specimen-status" />
+            <code value="Available"></code>
+      <display value="可用"></display>
+        </contains>
+        <contains>
+            <system value="http://CodeSystem.hl7fhir.cn/specimen-status" />
+            <code value="entered-in-error"></code>
+      <display value="输入错误的"></display>
+        </contains>
+    </expansion>
 </ValueSet>

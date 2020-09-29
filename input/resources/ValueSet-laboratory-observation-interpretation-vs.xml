@@ -3,13 +3,55 @@
 	<id value="laboratory-observation-interpretation-vs"/>
  <url value="http://ValueSet.hl7fhir.cn/laboratory-observation-interpretation-vs"/>
  <name value="laboratory-observation-interpretation-vs"/><!-- ?? 0..1 Name for this value set (computer friendly) -->
- <title value="检验结果"/><!-- 0..1 Name for this value set (human friendly) -->
+ <title value="测试结果解释"/><!-- 0..1 Name for this value set (human friendly) -->
  <status value="draft"/><!-- 1..1 draft | active | retired | unknown -->
   <description value="对观察值的绝对评估。例如，高，低，正常。 "/>
- <compose>  <!-- 0..1 Content logical definition of the value set (CLD) --> 
-  <include>  <!-- 1..* Include one or more codes from a code system or other value set(s) -->
-   <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/><!-- ?? 0..1 The system the codes come from --> 
-  </include>
-  <exclude><!-- ?? 0..* Content as for ValueSet.compose.include Explicitly exclude codes from a code system or other value sets --></exclude>
- </compose>
+ <publisher value="四川省卫生与健康委员会" />
+    <jurisdiction>
+        <coding>
+            <system value="http://ValueSet.hl7fhir.cn/countries-and-regions" />
+            <code value="156" />
+        </coding>
+        <text value="中国" />
+    </jurisdiction>
+    <expansion>
+        <timestamp value="2020-07-14T16:15:38.215+08:00" />
+        <total value="7" />
+        <offset value="0" />
+        <contains>
+            <system value="http://CodeSystem.hl7fhir.cn/laboratory-observation-interpretation" />
+            <code value="high"></code>
+      <display value="高"></display>
+        </contains>
+        <contains>
+            <system value="http://CodeSystem.hl7fhir.cn/laboratory-observation-interpretation" />
+             <code value="major-changes"></code>
+      <display value="重大变化"></display>
+        </contains>
+        <contains>
+            <system value="http://CodeSystem.hl7fhir.cn/laboratory-observation-interpretation" />
+             <code value="low"></code>
+      <display value="低"></display>
+        </contains>
+        <contains>
+            <system value="http://CodeSystem.hl7fhir.cn/laboratory-observation-interpretation" />
+             <code value="observe-and-explain-abnormalities"></code>
+      <display value="观察解释异常"></display>
+        </contains>
+		 <contains>
+            <system value="http://CodeSystem.hl7fhir.cn/laboratory-observation-interpretation" />
+              <code value="serious-exception"></code>
+      <display value="严重异常"></display>
+        </contains>
+		 <contains>
+            <system value="http://CodeSystem.hl7fhir.cn/laboratory-observation-interpretation" />
+             <code value="accident"></code>
+      <display value="意外"></display>
+        </contains>
+		 <contains>
+            <system value="http://CodeSystem.hl7fhir.cn/laboratory-observation-interpretation" />
+            <code value="weak-reactivity"></code>
+      <display value="反应性弱"></display>
+        </contains>
+    </expansion>
 </ValueSet>
