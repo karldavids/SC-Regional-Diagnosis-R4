@@ -5,6 +5,7 @@
   <name value="RequestIntent" />
   <title value="申请意图" />
   <status value="draft" />
+  <description value="描述申请意图" />
   <fhirVersion value="4.0.0" />
   <mapping>
     <identity value="rim" />
