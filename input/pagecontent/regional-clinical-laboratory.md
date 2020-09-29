@@ -132,7 +132,7 @@ RESTful API请求数据通过[Bundle](http://www.hl7fhir.cn/R4/bundle.html)（�
 
 ### 数据交互流程
 
-数据交互流程遵循[区域临床检验流程定义](PPlanDefinition-pd-regional-laboratory-inspection.html)定义的流程规则和步骤，采用消息交换方式或者RESTful方式交换数据。具体流程 如 “图 5-区域临床检验流程图”
+数据交互流程遵循[区域临床检验流程定义](PlanDefinition-pd-regional-laboratory-inspection.html)定义的流程规则和步骤，采用消息交换方式或者RESTful方式交换数据。具体流程 如 “图 5-区域临床检验流程图”
 
 ![流程图](sequence.png)
 
