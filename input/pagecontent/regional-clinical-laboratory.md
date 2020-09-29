@@ -39,7 +39,7 @@
 - [LaboratoryReport](StructureDefinition-regional-clinical-laboratory.html):检验结果回传资源，该资源描述检验结果。
 
 上述流程定义、活动定义、活动实例资源的关系图如“图 1-区域临床检验流程定义关系图”
-![流程定义](..\images/PlanDefinition-ActivityDefinition-Task-Relationship.png)
+![流程定义](PlanDefinition-ActivityDefinition-Task-Relationship.png)
 
 > 流程启动后，每个活动步骤将产生一个活动实例资源的新实例，其示例如下：
 
@@ -65,7 +65,7 @@ FHIR的数据交换方式支持RESTful、SOA、消息交换等。本场景目前
 
 > 资源捆束里的各条目中的资源的相互关系是通过消息头引用活动实例资源，活动实例资源再关联业务资源来展现的。示意图如 “图 2-消息交换数据报文结构图”
 
-![数据结构](..\images/structure-bundle.png)
+![数据结构](structure-bundle.png)
 
 资源捆束中条目中的资源类型在不同的业务活动（步骤）中是不同的，
 本规范集使用[MessageDefinition](http://www.hl7fhir.cn/R4/messagedefinition.html)定义每个活动数据交换的消息体结构，
@@ -91,7 +91,7 @@ RESTful API请求数据通过[Bundle](http://www.hl7fhir.cn/R4/bundle.html)（�
 
 > 资源捆束里的各条目中的资源的相互关系是通过活动实例资源关联业务资源来展现的。示意图如 “图 3-RESTful数据报文结构图”
 
-![数据结构](..\images/structure-RESTful-bundle.png)
+![数据结构](structure-RESTful-bundle.png)
 
 资源捆束中条目中的资源类型在不同的业务活动（步骤）中是不同的，
 本规范集遵循[区域临床检验流程定义](PlanDefinition-pd-regional-clinical-laboratory.html)中的Action元素对应的步骤定义。
@@ -125,14 +125,14 @@ RESTful API请求数据通过[Bundle](http://www.hl7fhir.cn/R4/bundle.html)（�
 
 > 资源捆束中包含的活动实例资源和业务资源相互关联以准确表达业务流程状态和业务数据信息，其相互关系图如 “图 4-业务资源类图”
 
-![业务类图](..\images/Class.png)
+![业务类图](Class.png)
 
 
 ### 数据交互流程
 
 数据交互流程遵循[区域临床检验流程定义](PlanDefinition-pd-regional-clinical-laboratory.html)定义的流程规则和步骤，采用消息交换方式或者RESTful方式交换数据。具体流程 如 “图 5-区域临床检验流程图”
 
-![流程图](..\images/sequence.png)
+![流程图](sequence.png)
 
 #### 消息交互方式的流程
 1. 临床开单系统发起检验申请单。
