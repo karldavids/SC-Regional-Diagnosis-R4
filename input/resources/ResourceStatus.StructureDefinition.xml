@@ -5,6 +5,7 @@
   <name value="ResourceStatus" />
   <title value="资源状态" />
   <status value="draft" />
+  <description value="描述资源的各种状态" />
   <fhirVersion value="4.0.0" />
   <mapping>
     <identity value="rim" />

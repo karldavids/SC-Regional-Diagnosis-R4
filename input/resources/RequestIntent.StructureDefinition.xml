@@ -21,6 +21,11 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
   <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="申请意图" />
+      <definition value="描述申请意图" />
+    </element>
     <element id="Extension.url">
       <path value="Extension.url" />
       <fixedUri value="http://StructureDefinition.hl7fhir.cn/request-intent" />
