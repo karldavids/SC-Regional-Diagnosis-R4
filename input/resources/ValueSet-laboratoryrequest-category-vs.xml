@@ -6,10 +6,44 @@
  <title value="实验室检验分类"/><!-- 0..1 Name for this value set (human friendly) -->
  <status value="draft"/><!-- 1..1 draft | active | retired | unknown -->
   <description value="为搜索、排序和显示目的而对服务进行分类的代码。如：生化检验、凝血检验"/>
- <compose>  <!-- 0..1 Content logical definition of the value set (CLD) --> 
-  <include>  <!-- 1..* Include one or more codes from a code system or other value set(s) -->
-   <system value="http://snomed.info/sct"/><!-- ?? 0..1 The system the codes come from --> 
-  </include>
-  <exclude><!-- ?? 0..* Content as for ValueSet.compose.include Explicitly exclude codes from a code system or other value sets --></exclude>
- </compose>
+<expansion>
+      <timestamp value="2020-09-29T18:22:16+08:00"/>
+      <total value="7"/>
+      <offset value="0"/>
+      <contains>
+         <system value="http://CodeSystem.hl7fhir.cn/laboratoryrequest-category"/>
+         <code value="clinical-chemistry-examination"/>
+         <display value="临床化学检查"/>
+      </contains>
+      <contains>
+         <system value="http://CodeSystem.hl7fhir.cn/laboratoryrequest-category"/>
+         <code value="blood-test"/>
+         <display value="血液学检查"/>
+      </contains>
+      <contains>
+         <system value="http://CodeSystem.hl7fhir.cn/laboratoryrequest-category"/>
+         <code value="clinical-microbiology"/>
+         <display value="临床微生物学检查"/>
+      </contains>
+      <contains>
+         <system value="http://CodeSystem.hl7fhir.cn/laboratoryrequest-category"/>
+         <code value="general-clinical-examination"/>
+         <display value="一般临床检验"/>
+      </contains>
+      <contains>
+         <system value="http://CodeSystem.hl7fhir.cn/laboratoryrequest-category"/>
+         <code value="clinical-immunological-examination"/>
+         <display value="临床免疫学检查"/>
+      </contains>
+      <contains>
+         <system value="http://CodeSystem.hl7fhir.cn/laboratoryrequest-category"/>
+         <code value="molecular-biology-examination"/>
+         <display value="分子生物学检查"/>
+      </contains>
+      <contains>
+         <system value="http://CodeSystem.hl7fhir.cn/laboratoryrequest-category"/>
+         <code value="clinical-parasitology"/>
+         <display value="临床寄生虫学检查"/>
+      </contains>
+   </expansion>
 </ValueSet>

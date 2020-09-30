@@ -6,10 +6,24 @@
  <title value="标本类型"/><!-- 0..1 Name for this value set (human friendly) -->
  <status value="draft"/><!-- 1..1 draft | active | retired | unknown -->
   <description value="形成标本的材料类型"/>
- <compose>  <!-- 0..1 Content logical definition of the value set (CLD) --> 
-  <include>  <!-- 1..* Include one or more codes from a code system or other value set(s) -->
-   <system value="http://terminology.hl7.org/CodeSystem/v2-0487"/><!-- ?? 0..1 The system the codes come from --> 
-  </include>
-  <exclude><!-- ?? 0..* Content as for ValueSet.compose.include Explicitly exclude codes from a code system or other value sets --></exclude>
- </compose>
+  <expansion>
+      <timestamp value="2020-09-29T18:22:16+08:00"/>
+      <total value="3"/>
+      <offset value="0"/>
+      <contains>
+         <system value="http://CodeSystem.hl7fhir.cn/specimen-type"/>
+         <code value="body-fluid"/>
+         <display value="体液"/>
+      </contains>
+      <contains>
+         <system value="http://CodeSystem.hl7fhir.cn/specimen-type"/>
+         <code value="urine"/>
+         <display value="尿液"/>
+      </contains>
+      <contains>
+         <system value="http://CodeSystem.hl7fhir.cn/specimen-type"/>
+         <code value="blood"/>
+         <display value="血液"/>
+      </contains>
+   </expansion>
 </ValueSet>
