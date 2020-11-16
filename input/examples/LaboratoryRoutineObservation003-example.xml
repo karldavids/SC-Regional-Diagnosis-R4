@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Observation xmlns="http://hl7.org/fhir">
   <!--0..1 检验结果ID-->
-  <id value="LaboratoryRoutineObservation001-example"/>
+  <id value="LaboratoryRoutineObservation003-example"/>
   <meta>
     <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/laboratory-routine-observation"/>
   </meta>
