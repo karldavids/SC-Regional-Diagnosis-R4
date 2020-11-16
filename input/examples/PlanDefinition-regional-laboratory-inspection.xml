@@ -2,12 +2,12 @@
 <PlanDefinition xmlns="http://hl7.org/fhir">
 	<id value="pd-regional-laboratory-inspection"/>
 	<!-- 0..1 Canonical identifier for this plan definition, represented as a URI (globally unique) -->
-	<url value="http://PlanDefinition.hl7fhir.cn/pd-regional-laboratory-inspection"/>
+	<url value="http://fhir.scwjxx.cn/Sichuan/PlanDefinition/pd-regional-laboratory-inspection"/>
 	<!-- 0..* 计划定义编号 -->
 	<!-- 0..* 活动标识符 -->
 	<identifier>
 		<!-- 0..1 活动标识符NamingSystem uri-->
-		<system value="http://NamingSystem.hl7fhir.cn/planDefinition-identifier"/>
+		<system value="http://fhir.scwjxx.cn/Sichuan/NamingSystem/planDefinition-identifier"/>
 		<!-- 0..1 活动标识符 -->
 		<value value="pd-regional-laboratory-inspection"/>
 	</identifier>
@@ -51,7 +51,7 @@
 	
 	<jurisdiction>
 		<coding>
-			<system value="http://CodeSystem.hl7fhir.cn/countries-and-regions"/>
+			<system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/countries-and-regions"/>
 			<code value="156"/>
 		</coding>
 		<text value="中国"/>
@@ -91,7 +91,7 @@
 		<code>
 			<coding>
 				<!-- 0..1 事件类型 CodeSystem url  -->
-				<system value="http://CodeSystem.hl7fhir.cn/activity-code"/>
+				<system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/activity-code"/>
 				<!-- 0..1 事件类型代码-->
 				<code value="C01005"/>
 				<!-- 0..1 事件类型名称 -->
@@ -119,7 +119,7 @@
 			<role>
 				<coding>
 					<!-- 0..1 参与者角色 CodeSystem url  -->
-					<system value="http://CodeSystem.hl7fhir.cn/encounter-participant-type"/>
+					<system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/encounter-participant-type"/>
 					<!-- 0..1 参与者角色代码-->
 					<code value="01"/>
 					<!-- 0..1 参与者角色 -->
@@ -147,7 +147,7 @@
 		<!-- 0..1 单次或者多次运行 single | multiple -->
 		<cardinalityBehavior value="single"/>
 		<!-- 0..1 该步骤的活动定义  -->
-		<definitionCanonical value="http://ActivityDefinition.hl7fhir.cn/ad-laboratory-request"/>
+		<definitionCanonical value="http://fhir.scwjxx.cn/Sichuan/ActivityDefinition/ad-laboratory-request"/>
 		
 	</action>
 
@@ -167,7 +167,7 @@
 		<code>
 			<coding>
 				<!-- 0..1 事件类型 CodeSystem url  -->
-				<system value="http://CodeSystem.hl7fhir.cn/activity-code"/>
+				<system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/activity-code"/>
 				<!-- 0..1 事件类型代码-->
 				<code value="C01006"/>
 				<!-- 0..1 事件类型名称 -->
@@ -193,7 +193,7 @@
 			<role>
 				<coding>
 					<!-- 0..1 参与者角色 CodeSystem url  -->
-					<system value="http://CodeSystem.hl7fhir.cn/encounter-participant-type"/>
+					<system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/encounter-participant-type"/>
 					<!-- 0..1 参与者角色代码-->
 					<code value="01"/>
 					<!-- 0..1 参与者角色 -->
@@ -220,7 +220,7 @@
 		<!-- 0..1 单次或者多次运行 single | multiple -->
 		<cardinalityBehavior value="single"/>
 		<!-- 0..1 该步骤的活动定义  -->
-		<definitionCanonical value="http://ActivityDefinition.hl7fhir.cn/ad-laboratory-report-release"/>
+		<definitionCanonical value="http://fhir.scwjxx.cn/Sichuan/ActivityDefinition/ad-laboratory-report-release"/>
 			
 	</action>
 

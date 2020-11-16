@@ -1,101 +1,74 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Bundle xmlns="http://hl7.org/fhir">
-	<id value="laboratory-report-release-example"/>
-	<type value="message"/>
-	<!--************************消息头****************************-->
+	<id value="Bundle-laboratory-report-release-inform-RESTful-example"/>
+	<type value="transaction-response"/>
+
+
+	<!--************************发布实验室检验报告通知******************************-->
 	<entry>
 		<resource>
-			<MessageHeader xmlns="http://hl7.org/fhir">
-				<!--1.1 消息ID（实例ID，重发不变）-->
-				<id value="MessageHeader-0006"/>
-				<!--消息事件 1..1-->
-				<eventCoding>
-					<!-- 0..1 事件类型 CodeSystem url  -->
-					<system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/activity-code"/>
-					<!-- 0..1 事件类型代码-->
-					<code value="C01006"/>
-					<!-- 0..1 事件类型名称 -->
-					<display value="发布实验室检验报告"/>
-				</eventCoding>
-				<!-- 1..1 消息源应用程序 -->
-				<source>
-					<!-- 0..1 系统名称（发送消息的系统） -->
-					<name value="[string]"/>
-					<!-- 0..1 软件名称（子系统名称） -->
-					<software value="[string]"/>
-					<!-- 0..1 运行的软件版本（当前版本） -->
-					<version value="[string]"/>
-					<!-- 1..1 ID地址(当前操作客户端IP地址) -->
-					<endpoint value="[uri]"/>
-				</source>
-				<!--消息实际内容 0..*-->
-				<focus>
-					<!-- 0..1 Reference(AppointmentResponse) 关联工作流信息 -->
-					<reference value="Task/LaboratoryReportRelease-example"/>
-				</focus>
-				<!-- 0..1 canonical(MessageDefinition) Link to the definition for this message -->
- 				<definition  value="MessageDefinition/md-laboratory-report-release"/>
-			</MessageHeader>
-		</resource>
-	</entry>
-
-	<!--************************发布实验室检验报告******************************-->
-	<entry>
-		<resource>
-      <Task xmlns="http://hl7.org/fhir">
-        <id value="LaboratoryReportRelease-example"/>
-        <!-- 0..1 canonical(ActivityDefinition) 关联ActivityDefinition -->
-        <instantiatesCanonical value="http://fhir.scwjxx.cn/Sichuan/ActivityDefinition/ad-laboratory-report-release"/>
-        <!-- 1..1 状态 draft | requested | received | accepted | + -->
-        <status value="requested"/>
-
-        <!-- 1..1 目的 unknown | proposal | plan | order | original-order | reflex-order | filler-order | instance-order | option -->
-        <intent value="proposal"/>
-
-        <!-- 0..1 CodeableConcept 事件类型 -->
-        <businessStatus>
+      <Communication xmlns="http://hl7.org/fhir">
+        <id value="LaboratoryReportReleaseInform-example"/>
+        <!-- 1..1 状态 preparation | in-progress | not-done | on-hold | stopped | completed | entered-in-error | unknown -->
+        <status value="completed"/>
+        <!-- 0..* 通信类别 -->
+        <category>
+          <!--0..1 通信类别  -->
           <coding>
-            <!-- 0..1 事件类型 CodeSystem url  -->
-            <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/activity-code"/>
-            <!-- 0..1 事件类型代码-->
-            <code value="C01006"/>
-            <!-- 0..1 事件类型名称 -->
-            <display value="发布实验室检验报告"/>
+            <!--0..1  通信类别代码 CodeSsystem地址-->
+            <system value="http://terminology.hl7.org/CodeSystem/communication-category"/>
+            <!--0..1  通信类别代码-->
+            <code value="notification"/>
+            <!--0..1 通信类别代码说明-->
+            <display value="Notification"/>
           </coding>
-        </businessStatus>
+        </category>
 
-        <!-- 0..1 CodeableConcept Task Type 任务类型-->
-        <code>
+
+        <!-- 0..1 患者信息 -->
+        <subject>
+          <!-- 0..1  Reference(Patient）关联患者信息 -->
+          <reference value="Patient/Patient001-example"/>
+        </subject>
+        <!-- 1..1 消息通知主题 -->
+        <topic>
+          <!--0..1 消息通知主题  -->
           <coding>
-            <!-- 0..1 任务类型 CodeSystem url  -->
-            <system value="http://hl7.org/fhir/CodeSystem/task-code"/>
-            <!-- 0..1 任务类型代码-->
-            <code value="approve"/>
-            <!-- 0..1 任务类型名称 -->
-            <display value="Activate/approve the focal resource"/>
+            <!--0..1 消息通知主题代码 CodeSsystem地址-->
+            <system value="http://CodeSsystem.hl7fhir.cn/communication-topic"/>
+            <!--0..1  消息通知主题代码-->
+            <code value="01"/>
+            <!--0..1 消息通知主题代码说明-->
+            <display value="实验室报告消息通知"/>
           </coding>
-        </code>
-        <!-- 0..1 任务描述 -->
-        <description value="实验室检验标本后，根据申请单的要求，发布对应的报告信息"/>
-        <!-- 0..1 Reference(Any) 关联该任务正在处理的资源 -->
-        <focus>
+        </topic>
+        
+        <!-- 0..* Reference(Any) 消息相关信息 -->
+        <about>
+          <!-- 0..1  Reference(DiagnosticReport）关联报告信息 -->
           <reference value="DiagnosticReport/LaboratoryReport-example"/>
-        </focus>
-        <!-- ?? 0..1 任务创建日期 -->
-        <authoredOn value="2019-02-10T13:00:00Z"/>
-        <!-- ?? 0..1 最后更新日期 -->
-        <lastModified value="2019-02-10T13:00:00Z"/>
-        <!-- 0..1 任务创建者，关联医护人员 -->
-        <requester>
-          <reference value="Practitioner/Practitioner001-example"/>
-        </requester>
+        </about>
+        
+        
+        <!-- 0..1 医疗事件 -->
+        <encounter>
+          <!-- 0..1  Reference(Encounter）关联医疗事件信息 -->
+          <reference value="Encounter/EncounterHospitalized001-example"/>
+        </encounter>
+        
+        <!-- 0..1 发送时间 -->
+        <sent value="2019-02-10T13:00:00Z"/>
 
-        <!-- 0..* 任务备注 -->
-        <note>
-          <!-- 1..1 The annotation  - text content (as markdown) -->
-          <text value="[markdown]"/>
-        </note>
-      </Task>		
+       
+
+        <!-- 0..1 发送者 -->
+        <sender>
+          <!-- 0..1  Reference(Organization）关联组织机构信息（医院） -->
+          <reference value="Organization/Hospital001-example"/>
+        </sender>
+        
+        
+      </Communication>              
 		</resource>
 	</entry>
   <!--************************实验室检验报告******************************-->
@@ -192,423 +165,20 @@
           <!-- 0..1  Reference(Specimen）关联标本信息 -->
           <reference value="Specimen/LaboratorySpecimen001-example"/>
         </specimen>
-
-        <!-- 0..* 检验结果-->
-        <result>
-          <!-- 0..1  Reference(Observation）关联观测结果信息 -->
-          <reference value="Observation/LaboratoryRoutineObservation001-example"/>
-        </result>
-        <result>
-          <!-- 0..1  Reference(Observation）关联观测结果信息 -->
-          <reference value="Observation/LaboratoryRoutineObservation002-example"/>
-        </result>
-        <result>
-          <!-- 0..1  Reference(Observation）关联观测结果信息 -->
-          <reference value="Observation/LaboratoryRoutineObservation003-example"/>
-        </result>
-
         <!-- 0..1 检验结论文字描述 -->
         <conclusion value="患者血常规检查无异常。"/>
+
+        <!-- 0..* 真实报告，以附件形式发送 -->
+        <presentedForm>
+          <!-- 0..1 报告地址 -->
+          <url value="http://DiagnosticReport/LaboratoryReport-example.html"/>
+          <!-- 0..1 Label to display in place of the data -->
+          <title value="张三的血常规报告"/>
+          <!-- 0..1 数据创建时间 -->
+          <creation value="2019-02-10T13:00:00Z"/>
+        </presentedForm>
+        
       </DiagnosticReport>
-
-    </resource>
-  </entry>
-
-  <!--************************红细胞数数据******************************-->
-  <entry>
-    <resource>
-      <Observation xmlns="http://hl7.org/fhir">
-        <!--0..1 检验结果ID-->
-        <id value="LaboratoryRoutineObservation001-example"/>
-        <meta>
-          <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/laboratory-routine-observation"/>
-        </meta>
-
-
-        <!-- 1..1  观测结果状态  -->
-        <status>
-          <extension url="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/resource-status">
-            <valueCoding>
-              <!-- 0..1 观测结果状态 CodeSystem url  地址(registered | preliminary | final | amended + )-->
-              <system value="http://hl7.org/fhir/observation-status"/>
-              <!-- 0..1 观测结果状态代码-->
-              <code value="final"/>
-              <!-- 0..1 观测结果状态说明 -->
-              <display value="final"/>
-            </valueCoding>
-          </extension>
-        </status>
-
-
-        <!-- 0..* 检验分类 -->
-        <category>
-          <coding>
-            <!-- 0..1 检验分类 CodeSystem url  地址-->
-            <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/laboratory-type"/>
-            <!-- 0..1 检验分类代码-->
-            <code value="01"/>
-            <!-- 0..1 检验分类说明 -->
-            <display value="生化检验"/>
-          </coding>
-        </category>
-
-        <!-- 1..1 检验项目（包）代码 -->
-        <code>
-          <coding>
-            <!-- 0..1 检验项目（包）代码 CodeSystem url  地址-->
-            <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/procedure-code"/>
-            <!-- 0..1 检验项目（包）代码-->
-            <code value="A0001"/>
-            <!-- 0..1 检验项目（包）说明 -->
-            <display value="血常规"/>
-          </coding>
-        </code>
-
-        <!-- 0..1 患者信息 -->
-        <subject>
-          <!-- 0..1  Reference(Patient）关联患者信息 -->
-          <reference value="Patient/Patient001-example"/>
-        </subject>
-
-
-        <!-- 0..1 医疗事件 -->
-        <encounter>
-          <!-- 0..1  Reference(Encounter）关联医疗事件信息 -->
-          <reference value="Encounter/Encounter001-example"/>
-        </encounter>
-
-        <!-- 0..* 检验明细 -->
-        <component>
-          <!-- 1..1 检验项目明细 -->
-          <code>
-            <coding>
-              <!-- 0..1 项目明细 CodeSystem url  地址-->
-              <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/laboratoryrequest-orderdetail"/>
-              <!-- 0..1 项目明细代码-->
-              <code value="A0001001"/>
-              <!-- 0..1 项目明细说明 -->
-              <display value="红细胞数"/>
-            </coding>
-          </code>
-          <!-- 0..1 观测结果值 （数字类型检验结果）-->
-          <valueQuantity>
-            <!-- 0..1  观测结果值-->
-            <value value="12.5"/>
-            <!-- 0..1 单位 -->
-            <unit value="mg/L"/>
-          </valueQuantity>
-
-          <!-- 0..* 测试结果解释（高\正常\低） -->
-          <interpretation>
-            <coding>
-              <!-- 0..1 测试结果解释 CodeSystem url  地址-->
-              <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/laboratory-observation-interpretation"/>
-              <!-- 0..1 测试结果解释代码-->
-              <code value="01"/>
-              <!-- 0..1 测试结果解释说明 -->
-              <display value="正常"/>
-            </coding>
-          </interpretation>
-
-          <!-- 0..* 标准值范围 -->
-          <referenceRange>
-            <!--  0..1 低范围 -->
-            <low>
-              <!-- 0..1  低范围值-->
-              <value value="8.5"/>
-              <!-- 0..1 单位 -->
-              <unit value="mg/L"/>
-            </low>
-            <!-- ?? 0..1 高范围 -->
-            <high>
-              <!-- 0..1  高范围值-->
-              <value value="25"/>
-              <!-- 0..1 单位 -->
-              <unit value="mg/L"/>
-            </high>
-
-            <!-- 0..1 参考范围的意义（正常、绝经后、中期、幼儿） -->
-            <type>
-              <coding>
-                <!-- 0..1 参考范围的意义 CodeSystem url  地址-->
-                <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/laboratory-referencerange-meaning"/>
-                <!-- 0..1 参考范围的意义代码-->
-                <code value="normal"/>
-                <!-- 0..1参考范围的意义说明 -->
-                <display value="Normal Range"/>
-              </coding>
-            </type>
-            <!-- 0..1 范围文字描述 -->
-            <text value="该指标正常"/>
-          </referenceRange>
-        </component>
-      </Observation>
-
-    </resource>
-  </entry>
-
-  <!--************************白细胞数数据******************************-->
-  <entry>
-    <resource>
-      <Observation xmlns="http://hl7.org/fhir">
-        <!--0..1 检验结果ID-->
-        <id value="LaboratoryRoutineObservation001-example"/>
-        <meta>
-          <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/laboratory-routine-observation"/>
-        </meta>
-
-
-        <!-- 1..1  观测结果状态  -->
-        <status>
-          <extension url="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/resource-status">
-            <valueCoding>
-              <!-- 0..1 观测结果状态 CodeSystem url  地址(registered | preliminary | final | amended + )-->
-              <system value="http://hl7.org/fhir/observation-status"/>
-              <!-- 0..1 观测结果状态代码-->
-              <code value="final"/>
-              <!-- 0..1 观测结果状态说明 -->
-              <display value="final"/>
-            </valueCoding>
-          </extension>
-        </status>
-
-
-        <!-- 0..* 检验分类 -->
-        <category>
-          <coding>
-            <!-- 0..1 检验分类 CodeSystem url  地址-->
-            <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/laboratory-type"/>
-            <!-- 0..1 检验分类代码-->
-            <code value="01"/>
-            <!-- 0..1 检验分类说明 -->
-            <display value="生化检验"/>
-          </coding>
-        </category>
-
-        <!-- 1..1 检验项目（包）代码 -->
-        <code>
-          <coding>
-            <!-- 0..1 检验项目（包）代码 CodeSystem url  地址-->
-            <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/procedure-code"/>
-            <!-- 0..1 检验项目（包）代码-->
-            <code value="A0001"/>
-            <!-- 0..1 检验项目（包）说明 -->
-            <display value="血常规"/>
-          </coding>
-        </code>
-
-        <!-- 0..1 患者信息 -->
-        <subject>
-          <!-- 0..1  Reference(Patient）关联患者信息 -->
-          <reference value="Patient/Patient001-example"/>
-        </subject>
-
-
-        <!-- 0..1 医疗事件 -->
-        <encounter>
-          <!-- 0..1  Reference(Encounter）关联医疗事件信息 -->
-          <reference value="Encounter/Encounter001-example"/>
-        </encounter>
-
-        <!-- 0..* 检验明细 -->
-        <component>
-          <!-- 1..1 检验项目明细 -->
-          <code>
-            <coding>
-              <!-- 0..1 项目明细 CodeSystem url  地址-->
-              <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/laboratoryrequest-orderdetail"/>
-              <!-- 0..1 项目明细代码-->
-              <code value="A0001002"/>
-              <!-- 0..1 项目明细说明 -->
-              <display value="白细胞数"/>
-            </coding>
-          </code>
-          <!-- 0..1 观测结果值 （数字类型检验结果）-->
-          <valueQuantity>
-            <!-- 0..1  观测结果值-->
-            <value value="17.5"/>
-            <!-- 0..1 单位 -->
-            <unit value="mg/L"/>
-          </valueQuantity>
-
-          <!-- 0..* 测试结果解释（高\正常\低） -->
-          <interpretation>
-            <coding>
-              <!-- 0..1 测试结果解释 CodeSystem url  地址-->
-              <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/laboratory-observation-interpretation"/>
-              <!-- 0..1 测试结果解释代码-->
-              <code value="01"/>
-              <!-- 0..1 测试结果解释说明 -->
-              <display value="正常"/>
-            </coding>
-          </interpretation>
-
-          <!-- 0..* 标准值范围 -->
-          <referenceRange>
-            <!--  0..1 低范围 -->
-            <low>
-              <!-- 0..1  低范围值-->
-              <value value="12.5"/>
-              <!-- 0..1 单位 -->
-              <unit value="mg/L"/>
-            </low>
-            <!-- ?? 0..1 高范围 -->
-            <high>
-              <!-- 0..1  高范围值-->
-              <value value="20"/>
-              <!-- 0..1 单位 -->
-              <unit value="mg/L"/>
-            </high>
-
-            <!-- 0..1 参考范围的意义（正常、绝经后、中期、幼儿） -->
-            <type>
-              <coding>
-                <!-- 0..1 参考范围的意义 CodeSystem url  地址-->
-                <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/laboratory-referencerange-meaning"/>
-                <!-- 0..1 参考范围的意义代码-->
-                <code value="normal"/>
-                <!-- 0..1参考范围的意义说明 -->
-                <display value="Normal Range"/>
-              </coding>
-            </type>
-            <!-- 0..1 范围文字描述 -->
-            <text value="该指标正常"/>
-          </referenceRange>
-        </component>
-      </Observation>
-
-    </resource>
-  </entry>
-
-  <!--************************血小版数数据******************************-->
-  <entry>
-    <resource>
-      <Observation xmlns="http://hl7.org/fhir">
-        <!--0..1 检验结果ID-->
-        <id value="LaboratoryRoutineObservation001-example"/>
-        <meta>
-          <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/laboratory-routine-observation"/>
-        </meta>
-
-
-        <!-- 1..1  观测结果状态  -->
-        <status>
-          <extension url="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/resource-status">
-            <valueCoding>
-              <!-- 0..1 观测结果状态 CodeSystem url  地址(registered | preliminary | final | amended + )-->
-              <system value="http://hl7.org/fhir/observation-status"/>
-              <!-- 0..1 观测结果状态代码-->
-              <code value="final"/>
-              <!-- 0..1 观测结果状态说明 -->
-              <display value="final"/>
-            </valueCoding>
-          </extension>
-        </status>
-
-
-        <!-- 0..* 检验分类 -->
-        <category>
-          <coding>
-            <!-- 0..1 检验分类 CodeSystem url  地址-->
-            <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/laboratory-type"/>
-            <!-- 0..1 检验分类代码-->
-            <code value="01"/>
-            <!-- 0..1 检验分类说明 -->
-            <display value="生化检验"/>
-          </coding>
-        </category>
-
-        <!-- 1..1 检验项目（包）代码 -->
-        <code>
-          <coding>
-            <!-- 0..1 检验项目（包）代码 CodeSystem url  地址-->
-            <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/procedure-code"/>
-            <!-- 0..1 检验项目（包）代码-->
-            <code value="A0001"/>
-            <!-- 0..1 检验项目（包）说明 -->
-            <display value="血常规"/>
-          </coding>
-        </code>
-
-        <!-- 0..1 患者信息 -->
-        <subject>
-          <!-- 0..1  Reference(Patient）关联患者信息 -->
-          <reference value="Patient/Patient001-example"/>
-        </subject>
-
-
-        <!-- 0..1 医疗事件 -->
-        <encounter>
-          <!-- 0..1  Reference(Encounter）关联医疗事件信息 -->
-          <reference value="Encounter/Encounter001-example"/>
-        </encounter>
-
-        <!-- 0..* 检验明细 -->
-        <component>
-          <!-- 1..1 检验项目明细 -->
-          <code>
-            <coding>
-              <!-- 0..1 项目明细 CodeSystem url  地址-->
-              <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/laboratoryrequest-orderdetail"/>
-              <!-- 0..1 项目明细代码-->
-              <code value="A0001001"/>
-              <!-- 0..1 项目明细说明 -->
-              <display value="血小版数"/>
-            </coding>
-          </code>
-          <!-- 0..1 观测结果值 （数字类型检验结果）-->
-          <valueQuantity>
-            <!-- 0..1  观测结果值-->
-            <value value="1.5"/>
-            <!-- 0..1 单位 -->
-            <unit value="mg/L"/>
-          </valueQuantity>
-
-          <!-- 0..* 测试结果解释（高\正常\低） -->
-          <interpretation>
-            <coding>
-              <!-- 0..1 测试结果解释 CodeSystem url  地址-->
-              <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/laboratory-observation-interpretation"/>
-              <!-- 0..1 测试结果解释代码-->
-              <code value="01"/>
-              <!-- 0..1 测试结果解释说明 -->
-              <display value="正常"/>
-            </coding>
-          </interpretation>
-
-          <!-- 0..* 标准值范围 -->
-          <referenceRange>
-            <!--  0..1 低范围 -->
-            <low>
-              <!-- 0..1  低范围值-->
-              <value value="0.5"/>
-              <!-- 0..1 单位 -->
-              <unit value="mg/L"/>
-            </low>
-            <!-- ?? 0..1 高范围 -->
-            <high>
-              <!-- 0..1  高范围值-->
-              <value value="2.8"/>
-              <!-- 0..1 单位 -->
-              <unit value="mg/L"/>
-            </high>
-
-            <!-- 0..1 参考范围的意义（正常、绝经后、中期、幼儿） -->
-            <type>
-              <coding>
-                <!-- 0..1 参考范围的意义 CodeSystem url  地址-->
-                <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/laboratory-referencerange-meaning"/>
-                <!-- 0..1 参考范围的意义代码-->
-                <code value="normal"/>
-                <!-- 0..1参考范围的意义说明 -->
-                <display value="Normal Range"/>
-              </coding>
-            </type>
-            <!-- 0..1 范围文字描述 -->
-            <text value="该指标正常"/>
-          </referenceRange>
-        </component>
-      </Observation>
 
     </resource>
   </entry>
@@ -712,6 +282,112 @@
           <reference value="Organization/Department001-example"/>
         </serviceProvider>
       </Encounter>
+    </resource>
+  </entry>
+
+  <!--************************患者信息******************************-->
+  <entry>
+    <resource>
+      <Patient xmlns="http://hl7.org/fhir">
+        <!--0..1 患者ID-->
+        <id value="Patient001-example"/>
+        <meta>
+          <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Patient"/>
+        </meta>
+        <!--1..* 身份证件号 -->
+        <identifier>
+          <!--证件类型-->
+          <type>
+            <coding>
+              <!-- 证件类型CodeSystem  地址 -->
+              <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/identity-document-type"/>
+              <!-- 0..1 证件类别编码 -->
+              <code value="01"/>
+              <!-- 0..1 证件类别名称 -->
+              <display value="身份证"/>
+            </coding>
+          </type>
+          <!--0..1 身份证件号码NamingSystem uri-->
+          <system value="http://fhir.scwjxx.cn/Sichuan/NamingSystem/identityDocument"/>
+          <!-- 0..1 身份证件号码 -->
+          <value value="511002938706190932"/>
+        </identifier>
+        <!-- 0..* 患者姓名 -->
+        <name>
+          <!-- 0..1 全名 -->
+          <text value="张三"/>
+        </name>
+        <!-- 0..1 生理性别 -->
+        <gender>
+          <extension url="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/sexual-distinction-of-human">
+            <valueCoding>
+              <!-- 0..1 生理性别 CodeSystem url  地址-->
+              <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/physiological-gender"/>
+              <!-- 0..1 生理性别代码-->
+              <code value="01"/>
+              <!-- 0..1 生理性别说明 -->
+              <display value="男"/>
+            </valueCoding>
+          </extension>
+        </gender>
+        <!--  0..* 联系电话 -->
+        <telecom>
+          <!--  0..1 类型 phone | fax | email | pager | url | sms | other -->
+          <system value="phone"/>
+          <!-- 0..1 电话号码 -->
+          <value value="13387362763"/>
+        </telecom>
+        <!-- 0..1 出生日期 -->
+        <birthDate value="1980-02-01"/>
+        <!--0..1 地址-->
+        <address>
+          <!-- 0..1 地址的完整描述 -->
+          <text value="[string]"/>
+          <!--行政区划代码(由于行政区划为12位村) -->
+          <extension url="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/AdministrativeDivision">
+            <!--行政区划代码 -->
+            <valueString value="5101002029378110"/>
+          </extension>
+        </address>
+
+        <!--联系人 -->
+        <contact>
+          <relationship>
+            <coding>
+              <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/contact-relationship" />
+              <!-- 联系人关系代码 -->
+              <code value="father" />
+              <!-- 联系人关系名称 -->
+              <display value="父亲"/>
+            </coding>
+          </relationship>
+          <!-- 联系人姓名 -->
+          <name>
+            <text value="李四" />
+          </name>
+        </contact>
+        <!-- 0..1 婚姻状况 GB/T 2261.2-->
+        <maritalStatus>
+          <coding>
+            <!-- 婚姻状况CodeSystem  地址 -->
+            <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/marital-status"/>
+            <!-- 0..1 婚姻状况编码 -->
+            <code value="01"/>
+            <!-- 0..1 婚姻状况 -->
+            <display value="已婚"/>
+          </coding>
+        </maritalStatus>
+        <!-- 民族 -->
+        <extension url="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/ChineseEthnicity">
+          <valueCoding>
+            <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/nationalites-of-PRC"/>
+            <!-- 民族编码 -->
+            <code value="1"/>
+            <!-- 民族名称 -->
+            <display value="汉族"/>
+          </valueCoding>
+        </extension>
+      </Patient>
     </resource>
   </entry>
 

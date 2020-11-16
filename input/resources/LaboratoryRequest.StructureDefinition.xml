@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="laboratory-request" />
-  <url value="http://StructureDefinition.hl7fhir.cn/laboratory-request" />
+  <url value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/laboratory-request" />
   <name value="LaboratoryRequest" />
   <title value="实验室检验申请" />
   <status value="draft" />
@@ -54,7 +54,7 @@
       </slicing>
       <type>
         <code value="Identifier" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/Identifier" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Identifier" />
       </type>
     </element>
     <element id="ServiceRequest.identifier:laboratoryIdentifier">
@@ -85,7 +85,7 @@
       <definition value="按此要求完成的计划/提议/订单。" />
       <type>
         <code value="Reference" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/Reference" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Reference" />
       </type>
     </element>
     <element id="ServiceRequest.replaces">
@@ -98,7 +98,7 @@
       <definition value="该标识符可以描述 一个服务组标识。代表组合或组标识符。" />
       <type>
         <code value="Identifier" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/Identifier" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Identifier" />
       </type>
     </element>
     <element id="ServiceRequest.status">
@@ -123,11 +123,11 @@
       <definition value="描述检验申请单的各种状态" />
       <type>
         <code value="Extension" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/resource-status"/>
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/resource-status" />
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="http://ValueSet.hl7fhir.cn/request-status-vs"/>
+        <valueSet value="http://ValueSet.hl7fhir.cn/request-status-vs" />
       </binding>
     </element>
     <element id="ServiceRequest.intent">
@@ -153,7 +153,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/request-intent" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/request-intent" />
       </type>
       <binding>
         <strength value="required" />
@@ -173,7 +173,7 @@
       <definition value="为搜索、排序和显示目的而对服务进行分类的代码。如：生化检验、凝血检验" />
       <type>
         <code value="CodeableConcept" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/CodeableConcept" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/CodeableConcept" />
       </type>
     </element>
     <element id="ServiceRequest.category:CategoryCode">
@@ -217,7 +217,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/request-priority" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/request-priority" />
       </type>
       <binding>
         <strength value="required" />
@@ -237,7 +237,7 @@
       <definition value="标识检验服务的代码" />
       <type>
         <code value="CodeableConcept" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/CodeableConcept" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/CodeableConcept" />
       </type>
       <binding>
         <strength value="example" />
@@ -250,7 +250,7 @@
       <definition value="关于 检验服务的细节和说明。比如检验的明细项目。&#xD;&#xA;关于服务的其他细节和说明。例如，导尿管的订单可能会有外置或留置导尿管的订单细节，或者绷带的订单可能需要额外的说明说明如何使用绷带。" />
       <type>
         <code value="CodeableConcept" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/CodeableConcept" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/CodeableConcept" />
       </type>
       <binding>
         <strength value="example" />
@@ -269,7 +269,7 @@
       <definition value="对谁执行服务。这通常是指病人，但也可以在动物、一组人或动物、透析仪等设备，甚至是位置(通常用于环境扫描)上提出请求" />
       <type>
         <code value="Reference" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/Reference" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Reference" />
       </type>
     </element>
     <element id="ServiceRequest.encounter">
@@ -278,7 +278,7 @@
       <definition value="提供关于发出此请求的医疗事件" />
       <type>
         <code value="Reference" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/Reference" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Reference" />
       </type>
     </element>
     <element id="ServiceRequest.occurrence[x]">
@@ -303,7 +303,7 @@
       <definition value="发起请求并负责激活请求的个人。通常指下达申请的医生" />
       <type>
         <code value="Reference" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/Reference" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Reference" />
       </type>
     </element>
     <element id="ServiceRequest.performerType">
@@ -313,7 +313,7 @@
       <max value="0" />
       <type>
         <code value="CodeableConcept" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/CodeableConcept" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/CodeableConcept" />
       </type>
     </element>
     <element id="ServiceRequest.performer">
@@ -323,7 +323,7 @@
       <max value="0" />
       <type>
         <code value="Reference" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/Reference" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Reference" />
       </type>
     </element>
     <element id="ServiceRequest.locationCode">
@@ -333,7 +333,7 @@
       <max value="0" />
       <type>
         <code value="CodeableConcept" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/CodeableConcept" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/CodeableConcept" />
       </type>
     </element>
     <element id="ServiceRequest.locationReference">
@@ -342,7 +342,7 @@
       <definition value="对过程实际应该发生的首选位置的引用。例如CT3检查室" />
       <type>
         <code value="Reference" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/Reference" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Reference" />
       </type>
     </element>
     <element id="ServiceRequest.reasonCode">
@@ -358,7 +358,7 @@
       <definition value="以编码或文本形式描述请求此服务的解释或理由。这通常是为了计费。&quot;" />
       <type>
         <code value="CodeableConcept" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/CodeableConcept" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/CodeableConcept" />
       </type>
     </element>
     <element id="ServiceRequest.reasonCode:DiagnoseCode">
@@ -425,7 +425,7 @@
       <definition value="以资源链接的形式描述请求此服务的解释或理由。" />
       <type>
         <code value="Reference" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/Reference" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Reference" />
       </type>
     </element>
     <element id="ServiceRequest.insurance">
@@ -434,7 +434,7 @@
       <definition value="交付所请求的服务可能需要的保险计划、覆盖范围扩展、预先授权和/或预先决定。" />
       <type>
         <code value="Reference" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/Reference" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Reference" />
       </type>
     </element>
     <element id="ServiceRequest.supportingInfo">
@@ -443,7 +443,7 @@
       <definition value="关于病人或标本的其他临床信息，可能影响服务。这些信息包括诊断、临床结果和其他观察结果。在实验室订货中，这些通常被称为“订单输入问题(AOEs)”。这包括生产者明确要求的观察(补充)，以提供完成订单所需的上下文或支持信息。例如，报告用于血气测量的吸入氧气量。" />
       <type>
         <code value="Reference" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/Reference" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Reference" />
       </type>
     </element>
     <element id="ServiceRequest.specimen">
@@ -452,7 +452,7 @@
       <definition value="实验室程序将使用的一个或多个标本" />
       <type>
         <code value="Reference" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/Reference" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Reference" />
       </type>
     </element>
     <element id="ServiceRequest.bodySite">
@@ -465,7 +465,7 @@
       <definition value="关于服务请求的任何其他注释和评论。例如，内部账单注释。" />
       <type>
         <code value="Annotation" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/Annotation" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Annotation" />
       </type>
     </element>
     <element id="ServiceRequest.patientInstruction">
@@ -479,7 +479,7 @@
       <definition value="请求历史记录中的关键事件。" />
       <type>
         <code value="Reference" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/Reference" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Reference" />
       </type>
     </element>
   </differential>

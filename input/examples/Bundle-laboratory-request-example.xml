@@ -11,7 +11,7 @@
 				<!--消息事件 1..1-->
 				<eventCoding>
 					<!-- 0..1 事件类型 CodeSystem url  -->
-					<system value="http://CodeSystem.hl7fhir.cn/activity-code"/>
+					<system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/activity-code"/>
 					<!-- 0..1 事件类型代码-->
 					<code value="C01005"/>
 					<!-- 0..1 事件类型名称 -->
@@ -46,13 +46,13 @@
         <!-- 0..1 实验室申请单ID -->
         <id value="LaboratoryRequest-example"/>
         <meta>
-          <profile value="http://StructureDefinition.hl7fhir.cn/laboratory-request"/>
+          <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/laboratory-request"/>
         </meta>
 
         <!-- 0..* 实验室申请单 -->
         <identifier>
           <!-- 0..1 实验室申请单编号NamingSystem uri-->
-          <system value="http://NamingSystem.hl7fhir.cn/laboratory-request-identifier"/>
+          <system value="http://fhir.scwjxx.cn/Sichuan/NamingSystem/laboratory-request-identifier"/>
           <!-- 0..1 实验室申请单编号 -->
           <value value="SYS000000ABC1234"/>
         </identifier>
@@ -60,14 +60,14 @@
         <!-- 0..1 检验申请组标识符 -->
         <requisition>
           <!--0..1 检验申请组编号NamingSystem uri-->
-          <system value="http://NamingSystem.hl7fhir.cn/laboratory-request-group-identifier"/>
+          <system value="http://fhir.scwjxx.cn/Sichuan/NamingSystem/laboratory-request-group-identifier"/>
           <!-- 0..1 检验申请组编号 -->
           <value value="G00001"/>
         </requisition>
 
         <!-- 1..1  申请单状态  -->
         <status >
-          <extension url="http://StructureDefinition.hl7fhir.cn/resource-status">
+          <extension url="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/resource-status">
             <valueCoding>
               <!-- 0..1 申请单状态 CodeSystem url  地址(draft | active | on-hold | revoked | completed | entered-in-error | unknown )-->
               <system value="http://hl7.org/fhir/request-status"/>
@@ -82,7 +82,7 @@
 
         <!-- 1..1 申请意图   -->
         <intent >
-          <extension url="http://StructureDefinition.hl7fhir.cn/resource-intent">
+          <extension url="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/resource-intent">
             <valueCoding>
               <!-- 0..1 申请意图 CodeSystem url  地址(proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option )-->
               <system value="http://hl7.org/fhir/request-intent"/>
@@ -98,7 +98,7 @@
         <category>
           <coding>
             <!-- 0..1 检验分类 CodeSystem url  地址-->
-            <system value="http://CodeSystem.hl7fhir.cn/laboratory-type"/>
+            <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/laboratory-type"/>
             <!-- 0..1 检验分类代码-->
             <code value="01"/>
             <!-- 0..1 检验分类说明 -->
@@ -107,7 +107,7 @@
         </category>
         <!-- 0..1 优先级  routine | urgent | asap | stat -->
         <priority >
-          <extension url="http://StructureDefinition.hl7fhir.cn/request-priority">
+          <extension url="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/request-priority">
             <valueCoding>
               <!-- 0..1 优先级 CodeSystem url  地址(  routine | urgent | asap | stat )-->
               <system value="http://hl7.org/fhir/request-intent"/>
@@ -123,7 +123,7 @@
         <code>
           <coding>
             <!-- 0..1 检验项目（包）代码 CodeSystem url  地址-->
-            <system value="http://CodeSystem.hl7fhir.cn/procedure-code"/>
+            <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/procedure-code"/>
             <!-- 0..1 检验项目（包）代码-->
             <code value="A0001"/>
             <!-- 0..1 检验项目（包）说明 -->
@@ -134,7 +134,7 @@
         <orderDetail>
           <coding>
             <!-- 0..1 项目明细 CodeSystem url  地址-->
-            <system value="http://CodeSystem.hl7fhir.cn/laboratoryrequest-orderdetail"/>
+            <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/laboratoryrequest-orderdetail"/>
             <!-- 0..1 项目明细代码-->
             <code value="A0001001"/>
             <!-- 0..1 项目明细说明 -->
@@ -145,7 +145,7 @@
         <orderDetail>
           <coding>
             <!-- 0..1 项目明细 CodeSystem url  地址-->
-            <system value="http://CodeSystem.hl7fhir.cn/laboratoryrequest-orderdetail"/>
+            <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/laboratoryrequest-orderdetail"/>
             <!-- 0..1 项目明细代码-->
             <code value="A0001002"/>
             <!-- 0..1 项目明细说明 -->
@@ -156,7 +156,7 @@
         <orderDetail>
           <coding>
             <!-- 0..1 项目明细 CodeSystem url  地址-->
-            <system value="http://CodeSystem.hl7fhir.cn/laboratoryrequest-orderdetail"/>
+            <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/laboratoryrequest-orderdetail"/>
             <!-- 0..1 项目明细代码-->
             <code value="A0001001"/>
             <!-- 0..1 项目明细说明 -->
@@ -203,7 +203,7 @@
         <reasonCode>
           <coding>
             <!-- 0..1 诊断ICD-10 CodeSystem url  地址-->
-            <system value="http://CodeSystem.hl7fhir.cn/condition-code"/>
+            <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/condition-code"/>
             <!-- 0..1 诊断ICD-10代码-->
             <code value="A000.01.000A01"/>
             <!-- 0..1 诊断ICD-10说明 -->
@@ -215,7 +215,7 @@
         <reasonCode>
           <coding>
             <!-- 0..1 卫生信息数据元目录 CodeSystem url  地址-->
-            <system value="http://CodeSystem.hl7fhir.cn/health-data-element-dictionary"/>
+            <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/health-data-element-dictionary"/>
             <!-- 0..1 卫生信息数据元目录代码-->
             <code value="DE04.01.119.00"/>
             <!-- 0..1 卫生信息数据元目录说明 -->
@@ -229,7 +229,7 @@
         <reasonCode>
           <coding>
             <!-- 0..1 卫生信息数据元目录 CodeSystem url  地址-->
-            <system value="http://CodeSystem.hl7fhir.cn/health-data-element-dictionary"/>
+            <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/health-data-element-dictionary"/>
             <!-- 0..1 卫生信息数据元目录代码-->
             <code value="DE04.01.117.00"/>
             <!-- 0..1 卫生信息数据元目录说明 -->
@@ -264,7 +264,7 @@
 				<!--0..1 患者ID-->
 				<id value="Patient001-example"/>
 				<meta>
-					<profile value="http://StructureDefinition.hl7fhir.cn/Patient"/>
+					<profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Patient"/>
 				</meta>
 				<!--1..* 身份证件号 -->
 				<identifier>
@@ -272,7 +272,7 @@
 					<type>
 						<coding>
 							<!-- 证件类型CodeSystem  地址 -->
-							<system value="http://CodeSystem.hl7fhir.cn/identity-document-type"/>
+							<system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/identity-document-type"/>
 							<!-- 0..1 证件类别编码 -->
 							<code value="01"/>
 							<!-- 0..1 证件类别名称 -->
@@ -280,7 +280,7 @@
 						</coding>
 					</type>
 					<!--0..1 身份证件号码NamingSystem uri-->
-					<system value="http://NamingSystem.hl7fhir.cn/identityDocument"/>
+					<system value="http://fhir.scwjxx.cn/Sichuan/NamingSystem/identityDocument"/>
 					<!-- 0..1 身份证件号码 -->
 					<value value="511002938706190932"/>
 				</identifier>
@@ -291,10 +291,10 @@
 				</name>
 				<!-- 0..1 生理性别 -->
 				<gender>
-					<extension url="http://StructureDefinition.hl7fhir.cn/sexual-distinction-of-human">
+					<extension url="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/sexual-distinction-of-human">
 						<valueCoding>
 							<!-- 0..1 生理性别 CodeSystem url  地址-->
-							<system value="http://CodeSystem.hl7fhir.cn/physiological-gender"/>
+							<system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/physiological-gender"/>
 							<!-- 0..1 生理性别代码-->
 							<code value="01"/>
 							<!-- 0..1 生理性别说明 -->
@@ -316,7 +316,7 @@
 					<!-- 0..1 地址的完整描述 -->
 					<text value="[string]"/>
 					<!--行政区划代码(由于行政区划为12位村) -->
-					<extension url="http://StructureDefinition.hl7fhir.cn/AdministrativeDivision">
+					<extension url="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/AdministrativeDivision">
 						<!--行政区划代码 -->
 						<valueString value="5101002029378110"/>
 					</extension>
@@ -326,7 +326,7 @@
 				<contact>
 					<relationship>
 						<coding>
-							<system value="http://CodeSystem.hl7fhir.cn/contact-relationship" />
+							<system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/contact-relationship" />
 							<!-- 联系人关系代码 -->
 							<code value="father" />
 							<!-- 联系人关系名称 -->
@@ -342,7 +342,7 @@
 				<maritalStatus>
 					<coding>
 						<!-- 婚姻状况CodeSystem  地址 -->
-						<system value="http://CodeSystem.hl7fhir.cn/marital-status"/>
+						<system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/marital-status"/>
 						<!-- 0..1 婚姻状况编码 -->
 						<code value="01"/>
 						<!-- 0..1 婚姻状况 -->
@@ -350,9 +350,9 @@
 					</coding>
 				</maritalStatus>
 				<!-- 民族 -->
-				<extension url="http://StructureDefinition.hl7fhir.cn/ChineseEthnicity">
+				<extension url="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/ChineseEthnicity">
 					<valueCoding>
-						<system value="http://CodeSystem.hl7fhir.cn/nationalites-of-PRC"/>
+						<system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/nationalites-of-PRC"/>
 						<!-- 民族编码 -->
 						<code value="1"/>
 						<!-- 民族名称 -->
@@ -371,19 +371,19 @@
         <id value="EncounterHospitalized001-example"/>
 
         <meta>
-          <profile value="http://StructureDefinition.hl7fhir.cn/encounter-hospitalized"/>
+          <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/encounter-hospitalized"/>
         </meta>
         <!--0..* 住院号 -->
         <identifier>
           <!-- 0..1 住院号NamingSystem uri-->
-          <system value="http://NamingSystem.hl7fhir.cn/hospitalized-identifier"/>
+          <system value="http://fhir.scwjxx.cn/Sichuan/NamingSystem/hospitalized-identifier"/>
           <!-- 0..1 住院号 -->
           <value value="20192737378181"/>
         </identifier>
 
         <!-- 1..1 住院状态   +-->
         <status>
-          <extension url="http://StructureDefinition.hl7fhir.cn/resource-status">
+          <extension url="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/resource-status">
             <valueCoding>
               <!-- 0..1 住院状态 CodeSystem url -->
               <system value="http://hl7.org/fhir/encounter-status"/>
@@ -472,22 +472,22 @@
 
         <id value="LaboratorySpecimen001-example"/>
         <meta>
-          <profile value="http://StructureDefinition.hl7fhir.cn/laboratory-specimen"/>
+          <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/laboratory-specimen"/>
         </meta>
         <!--0..1 标本号-->
         <identifier>
           <!--0..1 标本号 NamingSystem uri-->
-          <system value="http://NamingSystem.hl7fhir.cn/laboratory-specimen-identifier"/>
+          <system value="http://fhir.scwjxx.cn/Sichuan/NamingSystem/laboratory-specimen-identifier"/>
           <!-- 0..1 标本号 -->
           <value value="SYS000000ABC1234"/>
         </identifier>
 
         <!-- 0..1 标本状态  available | unavailable | unsatisfactory | entered-in-error -->
         <status>
-          <extension url="http://StructureDefinition.hl7fhir.cn/resource-status">
+          <extension url="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/resource-status">
             <valueCoding>
               <!-- 0..1 标本状态 CodeSystem url  地址(	available | unavailable | unsatisfactory | entered-in-error )-->
-              <system value="http://CodeSystem.hl7fhir.cn/specimen-status"/>
+              <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/specimen-status"/>
               <!-- 0..1 标本状态代码-->
               <code value="available"/>
               <!-- 0..1 标本状态说明 -->
@@ -502,7 +502,7 @@
         <type>
           <coding>
             <!-- 0..1 标本类别 CodeSystem url  地址-->
-            <system value="http://CodeSystem.hl7fhir.cn/specimen-type"/>
+            <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/specimen-type"/>
             <!-- 0..1 标本类别代码-->
             <code value="BLD"/>
             <!-- 0..1 标本类别说明 -->
@@ -550,13 +550,13 @@
         <!--0..1 病床ID-->
         <id value="HospitalBed001-example"/>
         <meta>
-          <profile value="http://StructureDefinition.hl7fhir.cn/hospital-bed"/>
+          <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/hospital-bed"/>
         </meta>
 
         <!--0..* 病床号 -->
         <identifier>
           <!-- 0..1 病床号NamingSystem uri-->
-          <system value="http://NamingSystem.hl7fhir.cn/hospital-bed-identifier"/>
+          <system value="http://fhir.scwjxx.cn/Sichuan/NamingSystem/hospital-bed-identifier"/>
           <!-- 0..1 病床号 -->
           <value value="X00001"/>
         </identifier>
@@ -608,12 +608,12 @@
       <Organization xmlns="http://hl7.org/fhir">
         <id value="Department001-example"/>
         <meta>
-          <profile value="http://StructureDefinition.hl7fhir.cn/Department"/>
+          <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Department"/>
         </meta>
         <!--0..1 科室编号-->
         <identifier>
           <!--0..1 科室编号 NamingSystem uri-->
-          <system value="http://NamingSystem.hl7fhir.cn/department-identifier"/>
+          <system value="http://fhir.scwjxx.cn/Sichuan/NamingSystem/department-identifier"/>
           <!-- 0..1 科室编号 -->
           <value value="ABC0000001"/>
         </identifier>
@@ -624,7 +624,7 @@
         <type>
           <coding>
             <!--组织机构层级种类 CodeSystem地址-->
-            <system value="http://CodeSystem.hl7fhir.cn/hierarchy-kind"/>
+            <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/hierarchy-kind"/>
             <!-- 0..1 组织机构层级种类代码-->
             <code value="A100"/>
             <!-- 0..1 组织机构层级种类 -->
@@ -660,7 +660,7 @@
 
 
         <!--0..1 图片 -->
-        <extension url="http://StructureDefinition.hl7fhir.cn/organization-picture">
+        <extension url="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/organization-picture">
           <!--0..1 logo图片 -->
           <extension url="logo">
             <ValueAttachment>
@@ -690,7 +690,7 @@
         </extension>
 
         <!--科室简介 -->
-        <extension url="http://StructureDefinition.hl7fhir.cn/BriefIntroduction">
+        <extension url="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/BriefIntroduction">
           <!--科室简介 -->
           <valueString value="XXXXXXXX科室针对【血小板减少】、【血小板增多】、【过敏性紫癜】、【贫血】等病提供专业治疗方案。"/>
         </extension>
@@ -704,12 +704,12 @@
       <Organization xmlns="http://hl7.org/fhir">
         <id value="EndemicArea001-example"/>
         <meta>
-          <profile value="http://StructureDefinition.hl7fhir.cn/EndemicArea"/>
+          <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/EndemicArea"/>
         </meta>
         <!--0..1 病区编号-->
         <identifier>
           <!--0..1 病区编号 NamingSystem uri-->
-          <system value="http://NamingSystem.hl7fhir.cn/endemic-area-identifier"/>
+          <system value="http://fhir.scwjxx.cn/Sichuan/NamingSystem/endemic-area-identifier"/>
           <!-- 0..1 病区编号 -->
           <value value="ABC0000001"/>
         </identifier>
@@ -720,7 +720,7 @@
         <type>
           <coding>
             <!--组织机构层级种类 CodeSystem地址-->
-            <system value="http://CodeSystem.hl7fhir.cn/hierarchy-kind"/>
+            <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/hierarchy-kind"/>
             <!-- 0..1 组织机构层级种类代码-->
             <code value="A100"/>
             <!-- 0..1 组织机构层级种类 -->
@@ -756,7 +756,7 @@
 
 
         <!--0..1 图片 -->
-        <extension url="http://StructureDefinition.hl7fhir.cn/organization-picture">
+        <extension url="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/organization-picture">
           <!--0..1 logo图片 -->
           <extension url="logo">
             <ValueAttachment>
@@ -786,7 +786,7 @@
         </extension>
 
         <!--病区简介 -->
-        <extension url="http://StructureDefinition.hl7fhir.cn/BriefIntroduction">
+        <extension url="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/BriefIntroduction">
           <!--病区简介 -->
           <valueString value="XXXXXXXX病区针对【血小板减少】、【血小板增多】、【过敏性紫癜】、【贫血】等病提供专业治疗方案。"/>
         </extension>
@@ -800,7 +800,7 @@
       <Organization xmlns="http://hl7.org/fhir">
         <id value="Hospital001-example"/>
         <meta>
-          <profile value="http://StructureDefinition.hl7fhir.cn/Hospital"/>
+          <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Hospital"/>
         </meta>
         <!--0..1 医院编号-->
         <identifier>
@@ -816,7 +816,7 @@
         <type>
           <coding>
             <!--组织机构层级种类 CodeSystem地址-->
-            <system value="http://CodeSystem.hl7fhir.cn/hierarchy-kind"/>
+            <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/hierarchy-kind"/>
             <!-- 0..1 组织机构层级种类代码-->
             <code value="A100"/>
             <!-- 0..1 组织机构层级种类 -->
@@ -827,7 +827,7 @@
         <type>
           <coding>
             <!--卫生机构(组织)类别 CodeSystem地址-->
-            <system value="http://CodeSystem.hl7fhir.cn/health-institution-category"/>
+            <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/health-institution-category"/>
             <!-- 0..1 卫生机构(组织)类别代码-->
             <code value="2"/>
             <!-- 0..1 卫生机构(组织)类别 -->
@@ -838,7 +838,7 @@
         <type>
           <coding>
             <!--组织机构类型 CodeSystem地址-->
-            <system value="http://CodeSystem.hl7fhir.cn/Classification-for-organizations"/>
+            <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/Classification-for-organizations"/>
             <!-- 0..1 组织机构类型代码-->
             <code value="5"/>
             <!-- 0..1 组织机构类型 -->
@@ -876,7 +876,7 @@
           <value value="http://www.cdzxy.com/"/>
         </telecom>
         <!--0..1 图片 -->
-        <extension url="http://StructureDefinition.hl7fhir.cn/organization-picture">
+        <extension url="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/organization-picture">
           <!--0..1 logo图片 -->
           <extension url="logo">
             <ValueAttachment>
@@ -906,7 +906,7 @@
         </extension>
 
         <!--医院简介 -->
-        <extension url="http://StructureDefinition.hl7fhir.cn/BriefIntroduction">
+        <extension url="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/BriefIntroduction">
           <!--医院简介 -->
           <valueString value="XXXXXXXX医院血液科针对【血小板减少】、【血小板增多】、【过敏性紫癜】、【贫血】等病提供专业治疗方案。"/>
         </extension>
@@ -920,7 +920,7 @@
       <Practitioner xmlns="http://hl7.org/fhir">
         <id value="Practitioner001-example"/>
         <meta>
-          <profile value="http://StructureDefinition.hl7fhir.cn/Practitioner"/>
+          <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Practitioner"/>
         </meta>
         <!--1..* 身份证件号 -->
         <identifier>
@@ -928,7 +928,7 @@
           <type>
             <coding>
               <!-- 证件类型CodeSystem  地址 -->
-              <system value="http://CodeSystem.hl7fhir.cn/identity-document-type"/>
+              <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/identity-document-type"/>
               <!-- 0..1 证件类别编码 -->
               <code value="01"/>
               <!-- 0..1 证件类别名称 -->
@@ -936,7 +936,7 @@
             </coding>
           </type>
           <!--0..1 身份证件号码NamingSystem uri-->
-          <system value="http://NamingSystem.hl7fhir.cn/identityDocument"/>
+          <system value="http://fhir.scwjxx.cn/Sichuan/NamingSystem/identityDocument"/>
           <!-- 0..1 身份证件号码 -->
           <value value="511002198609021982"/>
         </identifier>
@@ -966,10 +966,10 @@
         </address>
         <!-- 0..1 生理性别 -->
         <gender>
-          <extension url="http://StructureDefinition.hl7fhir.cn/sexual-distinction-of-human">
+          <extension url="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/sexual-distinction-of-human">
             <valueCoding>
               <!-- 0..1 生理性别 CodeSystem url  地址-->
-              <system value="http://CodeSystem.hl7fhir.cn/physiological-gender"/>
+              <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/physiological-gender"/>
               <!-- 0..1 生理性别代码-->
               <code value="01"/>
               <!-- 0..1 生理性别说明 -->
@@ -992,14 +992,14 @@
           <!-- 0..1 标题 -->
           <title value="寸照"/>
         </photo>
-        <extension url="http://StructureDefinition.hl7fhir.cn/BriefIntroduction">
+        <extension url="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/BriefIntroduction">
           <valueString value="擅长运用中医、中西医结合治疗血小板减少、血小板增多等血液疾病独树一帜，她在多年临床发现治疗血液病单纯靠西药激素治疗并不理想，立志另辟蹊径潜心进修中医，对多种疑难病症有着丰富的临床诊疗经验。"/>
         </extension>
         <!-- 0..1 国籍   GB/T 2659 世界各国和地区名称代码-->
-        <extension url="http://StructureDefinition.hl7fhir.cn/Nationality">
+        <extension url="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Nationality">
           <valueCoding>
             <!-- 0..1 世界各国和地区名称代码 CodeSystem url  地址  -->
-            <system value="http://CodeSystem.hl7fhir.cn/countries-and-regions"/>
+            <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/countries-and-regions"/>
             <!-- 0..1 世界各国和地区名称代码-->
             <code value="64"/>
             <!-- 0..1 世界各国和地区名称代码说明 -->
@@ -1007,10 +1007,10 @@
           </valueCoding>
         </extension>
         <!-- 0..1 民族  中华56个民族代码， GB 3304-->
-        <extension url="http://StructureDefinition.hl7fhir.cn/ChineseEthnicity">
+        <extension url="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/ChineseEthnicity">
           <valueCoding>
             <!-- 0..1 民族类别 CodeSystem url  地址-->
-            <system value="http://CodeSystem.hl7fhir.cn/nationalites-of-PRC"/>
+            <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/nationalites-of-PRC"/>
             <!-- 0..1 民族类别代码-->
             <code value="01"/>
             <!-- 0..1 民族类别说明 -->
@@ -1018,11 +1018,11 @@
           </valueCoding>
         </extension>
         <!-- 0..1 政治面貌， GB 4762-1984-->
-        <extension url="http://StructureDefinition.hl7fhir.cn/sexual-distinction-of-human">
+        <extension url="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/sexual-distinction-of-human">
           <extension url="orgnaztion">
             <valueCoding>
               <!-- 0..1 政治面貌 CodeSystem url  地址-->
-              <system value="http://CodeSystem.hl7fhir.cn/politic-affiliation"/>
+              <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/politic-affiliation"/>
               <!-- 0..1 政治面貌代码-->
               <code value="01"/>
               <!-- 0..1 政治面貌说明 -->
@@ -1031,11 +1031,11 @@
           </extension>
         </extension>
         <!-- 0..1 参加工作日期-->
-        <extension url="http://StructureDefinition.hl7fhir.cn/date-start-work">
+        <extension url="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/date-start-work">
           <valueDate value="2014-01-01"/>
         </extension>
         <!-- 0..1 是否多地点执业医师-->
-        <extension url="http://StructureDefinition.hl7fhir.cn/is-work-for-multi-org">
+        <extension url="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/is-work-for-multi-org">
           <valueBoolean value="false"/>
         </extension>
       </Practitioner>

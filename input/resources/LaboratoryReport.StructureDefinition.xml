@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="laboratory-report" />
-  <url value="http://StructureDefinition.hl7fhir.cn/laboratory-report" />
+  <url value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/laboratory-report" />
   <name value="LaboratoryReport" />
   <title value="实验室报告" />
   <status value="draft" />
@@ -50,7 +50,7 @@
       <definition value="检验标识符，唯一且明确地标识报告实体。业务标识符，在不同业务域中的唯一标识ID。可作为交叉索引使用。" />
       <type>
         <code value="Identifier" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/Identifier" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Identifier" />
       </type>
     </element>
     <element id="DiagnosticReport.identifier:laboratoryReportIdentifier">
@@ -72,7 +72,7 @@
       <definition value="有关所请求的服务的详细信息。" />
       <type>
         <code value="Reference" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/Reference" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Reference" />
       </type>
     </element>
     <element id="DiagnosticReport.status">
@@ -98,7 +98,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/resource-status" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/resource-status" />
       </type>
       <binding>
         <strength value="required" />
@@ -117,7 +117,7 @@
       </slicing>
       <type>
         <code value="CodeableConcept" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/CodeableConcept" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/CodeableConcept" />
       </type>
     </element>
     <element id="DiagnosticReport.category:CategoryCode">
@@ -144,7 +144,7 @@
       <definition value="描述此检验报告的代码或名称，可描述检验打包项" />
 	  <type>
 		<code value="CodeableConcept"/>
-			<profile value="http://StructureDefinition.hl7fhir.cn/CodeableConcept"/>
+			<profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/CodeableConcept"/>
 	  </type>
       <binding>
         <strength value="preferred" />
@@ -157,7 +157,7 @@
       <short value="报告主题体" />
       <type>
         <code value="Reference" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/Reference" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Reference" />
       </type>
     </element>
     <element id="DiagnosticReport.encounter">
@@ -166,7 +166,7 @@
       <definition value="该报告关联的医疗事件，如门诊，住院，体检等。" />
       <type>
         <code value="Reference" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/Reference" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Reference" />
       </type>
     </element>
     <element id="DiagnosticReport.effective[x]">
@@ -178,7 +178,7 @@
       </type>
       <type>
         <code value="Period" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/Period" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Period" />
       </type>
     </element>
     <element id="DiagnosticReport.issued">
@@ -192,7 +192,7 @@
       <definition value="如果对结果有疑问，需要知道与谁联系。还可能需要跟踪报告的来源以进行辅助数据分析。&quot;" />
       <type>
         <code value="Reference" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/Reference" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Reference" />
       </type>
     </element>
     <element id="DiagnosticReport.resultsInterpreter">
@@ -201,7 +201,7 @@
       <definition value="负责报告结论和解释的从业者或组织。通常指报告发布者" />
       <type>
         <code value="Reference" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/Reference" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Reference" />
       </type>
     </element>
     <element id="DiagnosticReport.specimen">
@@ -210,7 +210,7 @@
       <definition value="有关此诊断报告所基于的标本的详细信息。" />
       <type>
         <code value="Reference" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/Reference" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Reference" />
       </type>
     </element>
     <element id="DiagnosticReport.result">
@@ -219,7 +219,7 @@
       <definition value="引用 观察资源描述 对该报告的观测项目的返回值进行描述" />
       <type>
         <code value="Reference" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/Reference" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Reference" />
       </type>
     </element>
     <element id="DiagnosticReport.imagingStudy">
@@ -241,7 +241,7 @@
       <definition value="代表诊断报告的摘要结论（解释/印象）的一个或多个代码。" />
       <type>
         <code value="CodeableConcept" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/CodeableConcept" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/CodeableConcept" />
       </type>
     </element>
     <element id="DiagnosticReport.presentedForm">
@@ -250,7 +250,7 @@
       <definition value="诊断服务发出的整个结果的富文本表示形式。允许使用多种格式，可以使用附件形式描述，如PDF,HTML。" />
       <type>
         <code value="Attachment" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/Attachment" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Attachment" />
       </type>
     </element>
   </differential>

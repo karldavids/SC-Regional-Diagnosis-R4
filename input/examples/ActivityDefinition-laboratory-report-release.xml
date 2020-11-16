@@ -2,12 +2,12 @@
 <ActivityDefinition xmlns="http://hl7.org/fhir">
 	<id value="ad-laboratory-report-release"/>
 	<!-- 0..1 ActivityDefinition 的全局URL -->
-	<url value="http://ActivityDefinition.hl7fhir.cn/ad-laboratory-report-release"/>
+	<url value="http://fhir.scwjxx.cn/Sichuan/ActivityDefinition/ad-laboratory-report-release"/>
 
 	<!-- 0..* 活动标识符 -->
 	<identifier>
 		<!-- 0..1 活动标识符NamingSystem uri-->
-		<system value="http://NamingSystem.hl7fhir.cn/activityDefinition-identifier"/>
+		<system value="http://fhir.scwjxx.cn/Sichuan/NamingSystem/activityDefinition-identifier"/>
 		<!-- 0..1 活动标识符 -->
 		<value value="ad-laboratory-report-release"/>
 	</identifier>
@@ -38,7 +38,7 @@
 	<description value="区域实验室检验流程的发布实验室检验报告活动，通过创建ActivityDefinition的实例，检验中心在收到各医院医生提交的实验室检验申请后，对申请中要求的项目进行检验操作，并且把结果以报告的形式发布。该活动的实际参与者为发布报告的医护人员。"/>
 	<jurisdiction>
 		<coding>
-			<system value="http://CodeSystem.hl7fhir.cn/countries-and-regions"/>
+			<system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/countries-and-regions"/>
 			<code value="156"/>
 		</coding>
 		<text value="中国"/>
@@ -75,7 +75,7 @@
 		<role>
 			<coding>
 				<!-- 0..1 参与者角色 CodeSystem url  -->
-				<system value="http://CodeSystem.hl7fhir.cn/encounter-participant-type"/>
+				<system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/encounter-participant-type"/>
 				<!-- 0..1 参与者角色代码-->
 				<code value="06"/>
 				<!-- 0..1 参与者角色 -->
