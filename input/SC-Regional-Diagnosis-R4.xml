@@ -99,6 +99,12 @@
 			</reference>
 			<description value="在医疗保健中获取或使用的照片，视频或音频记录"/>
 		</resource>
+
+
+
+
+
+
 		<!--<resource>
 <reference>
 <reference value="MyLogicalModel/AS"/>
@@ -276,7 +282,57 @@
 
 
 
+		<resource>
+			<reference>
+				<!-- ActivityDefinition资源示例 -->
+				<reference value="ActivityDefinition/ad-inspect-request"/>
+			</reference>
+			<name value="检查申请ActivityDefinition示例"/>
+			<description value="演示如何定义和引用检查申请ActivityDefinition的简单示例"/>
+			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/ActivityDefinition"/>
+		</resource>
 
+		<resource>
+			<reference>
+				<!-- ActivityDefinition资源示例 -->
+				<reference value="ActivityDefinition/ad-inspect-report-release"/>
+			</reference>
+			<name value="发布检查报告ActivityDefinition示例"/>
+			<description value="演示如何定义和引用发布检查报告ActivityDefinition的简单示例"/>
+			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/ActivityDefinition"/>
+		</resource>
+		
+		<resource>
+			<reference>
+				<!-- PlanDefinition资源示例 -->
+				<reference value="PlanDefinition/pd-regional-inspect-inspection"/>
+			</reference>
+			<name value="区域影像流程的流程定义PlanDefinition示例"/>
+			<description value="演示如何定义和引用区域影像的流程定义PlanDefinition的简单示例"/>
+			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/PlanDefinition"/>
+		</resource>
+
+		<resource>
+			<reference>
+				<!-- MessageDefinition资源示例 -->
+				<reference value="MessageDefinition/md-inspect-request"/>
+			</reference>
+			<name value="检查申请消息定义MessageDefinition的示例"/>
+			<description value="演示如何定义和引用检查申请消息定义MessageDefinition的示例"/>
+				
+		</resource>
+
+		
+
+		<resource>
+			<reference>
+				<!-- MessageDefinition资源示例 -->
+				<reference value="MessageDefinition/md-inspect-report-release"/>
+			</reference>
+			<name value="发布检查报告消息定义MessageDefinition的示例"/>
+			<description value="演示如何定义和引用发布检查报告消息定义MessageDefinition的示例"/>
+			
+		</resource>
 		
 
 		<!--    <resource>
