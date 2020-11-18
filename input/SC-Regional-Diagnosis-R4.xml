@@ -75,6 +75,30 @@
 			</reference>
 			<description value="在医院实验室检验中，用于分析的样品。"/>
 		</resource>
+
+		<resource>
+			<reference>
+				<!-- 本地资源定义（InspectReport） -->
+				<reference value="StructureDefinition/inspect-report"/>
+			</reference>
+			<description value="对患者、患者组从中提取的标本或者对其身体部位进行的诊断试验的结果和解释。此报告包括了临床场景（如申请单、提供者信息），有些报告将单项指标结果、图像、文本和带编码的解释、以及带格式的诊断报告"/>
+		</resource>
+
+		<resource>
+			<reference>
+				<!-- 本地资源定义（InspectRequest） -->
+				<reference value="StructureDefinition/inspect-request"/>
+			</reference>
+			<description value="描述医院内 临床医生对患者提交检查申请的资源，包括影像、超声、病理、心电等。"/>
+		</resource>
+
+		<resource>
+			<reference>
+				<!-- 本地资源定义（Media） -->
+				<reference value="StructureDefinition/Media"/>
+			</reference>
+			<description value="在医疗保健中获取或使用的照片，视频或音频记录"/>
+		</resource>
 		<!--<resource>
 <reference>
 <reference value="MyLogicalModel/AS"/>
@@ -252,7 +276,7 @@
 
 
 
-		
+
 		
 
 		<!--    <resource>
