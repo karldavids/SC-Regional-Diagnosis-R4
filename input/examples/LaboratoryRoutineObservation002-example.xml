@@ -34,16 +34,16 @@
     </coding>
   </category>
 
-  <!-- 1..1 检验项目（包）代码 -->
+  <!-- 1..1 检验项目代码 -->
   <code>
-    <coding>
-      <!-- 0..1 检验项目（包）代码 CodeSystem url  地址-->
-      <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/procedure-code"/>
-      <!-- 0..1 检验项目（包）代码-->
-      <code value="A0001"/>
-      <!-- 0..1 检验项目（包）说明 -->
-      <display value="血常规"/>
-    </coding>
+	  <coding>
+		  <!-- 0..1 项目明细 CodeSystem url  地址-->
+		  <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/laboratoryrequest-orderdetail"/>
+		  <!-- 0..1 项目明细代码-->
+		  <code value="A0001002"/>
+		  <!-- 0..1 项目明细说明 -->
+		  <display value="白细胞数"/>
+	  </coding>
   </code>
 
   <!-- 0..1 患者信息 -->
@@ -60,18 +60,8 @@
   </encounter>
 
   <!-- 0..* 检验明细 -->
-  <component>
-    <!-- 1..1 检验项目明细 -->
-    <code>
-      <coding>
-        <!-- 0..1 项目明细 CodeSystem url  地址-->
-        <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/laboratoryrequest-orderdetail"/>
-        <!-- 0..1 项目明细代码-->
-        <code value="A0001002"/>
-        <!-- 0..1 项目明细说明 -->
-        <display value="白细胞数"/>
-      </coding>
-    </code>
+ 
+  
     <!-- 0..1 观测结果值 （数字类型检验结果）-->
     <valueQuantity>
       <!-- 0..1  观测结果值-->
@@ -123,5 +113,5 @@
       <!-- 0..1 范围文字描述 -->
       <text value="该指标正常"/>
     </referenceRange>
-  </component>
+ 
 </Observation>

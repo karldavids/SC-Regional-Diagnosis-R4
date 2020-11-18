@@ -34,7 +34,7 @@
     </coding>
   </category>
 
-  <!-- 1..1 检验项目（包）代码 -->
+  <!-- 1..1 检验项目 -->
   <code>
 	  <coding>
 		  <!-- 0..1 项目明细 CodeSystem url  地址-->
