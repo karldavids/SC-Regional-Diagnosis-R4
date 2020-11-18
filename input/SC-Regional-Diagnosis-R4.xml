@@ -41,7 +41,37 @@
 		<!--0..* 生成IG需求信息。其中grouping节点可由IGPublisher自动定义，也可手动定义个性化需求。 -->
 
 		
-		
+		<resource>
+			<reference>
+				<!-- 本地资源定义（LaboratoryRequest） -->
+				<reference value="StructureDefinition/laboratory-request"/>
+			</reference>
+			<description value="描述医院内 临床医生对患者提交实验室检验申请的资源。"/>
+		</resource>
+
+		<resource>
+			<reference>
+				<!-- 本地资源定义（LaboratoryReport） -->
+				<reference value="StructureDefinition/laboratory-report"/>
+			</reference>
+			<description value="对患者、患者组从中提取的标本进行的诊断试验的结果和解释。此报告包括了临床场景（如申请单、提供者信息），有些报告将单项指标结果、图像、文本和带编码的解释、以及带格式的诊断报告"/>
+		</resource>
+
+		<resource>
+			<reference>
+				<!-- 本地资源定义（LaboratoryRoutineObservation） -->
+				<reference value="StructureDefinition/laboratory-routine-observation"/>
+			</reference>
+			<description value="描述实验室常规检验的详细检验结果的反馈，如 生化检验、血液检验、临检检验。"/>
+		</resource>
+
+		<resource>
+			<reference>
+				<!-- 本地资源定义（LaboratorySpecimen） -->
+				<reference value="StructureDefinition/laboratory-specimen"/>
+			</reference>
+			<description value="在医院实验室检验中，用于分析的样品。"/>
+		</resource>
 		
 		
 		
@@ -51,7 +81,175 @@
 </reference>
 </resource> -->
 
+		<resource>
+			<reference>
+				<!-- 资源示例 -->
+				<reference value="ServiceRequest/LaboratoryRequest-example"/>
+			</reference>
+			<name value="实验室检验申请示例"/>
+			<description value="演示如何定义和引用实验室检验申请的简单示例"/>
+			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/laboratory-request"/>
+		</resource>
+
+
+		<resource>
+			<reference>
+				<!-- 资源示例 -->
+				<reference value="DiagnosticReport/LaboratoryReport-example"/>
+			</reference>
+			<name value="实验室检验报告示例"/>
+			<description value="演示如何定义和引用实验室检验报告的简单示例"/>
+			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/laboratory-report"/>
+		</resource>
 		
+		
+		
+		<resource>
+			<reference>
+				<!-- 资源示例 -->
+				<reference value="Task/LaboratoryReportRelease-example"/>
+			</reference>
+			<name value="发布实验室检验报告示例"/>
+			<description value="演示如何定义和引用发布实验室检验报告的简单示例"/>
+			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Task"/>
+		</resource>
+
+		<resource>
+			<reference>
+				<!-- 资源示例 -->
+				<reference value="Specimen/LaboratorySpecimen001-example"/>
+			</reference>
+			<name value="实验室检验标本示例"/>
+			<description value="演示如何定义和引用实验室检验标本的简单示例"/>
+			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/laboratory-specimen"/>
+		</resource>
+		
+		<resource>
+			<reference>
+				<!-- 资源示例 -->
+				<reference value="Observation/LaboratoryRoutineObservation001-example"/>
+			</reference>
+			<name value="红细胞观测结果示例"/>
+			<description value="演示如何定义和引用红细胞观测结果的简单示例"/>
+			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/laboratory-routine-observation"/>
+		</resource>
+		
+		<resource>
+			<reference>
+				<!-- 资源示例 -->
+				<reference value="Observation/LaboratoryRoutineObservation002-example"/>
+			</reference>
+			<name value="白细胞观测结果示例"/>
+			<description value="演示如何定义和引用白细胞观测结果的简单示例"/>
+			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/laboratory-routine-observation"/>
+		</resource>
+		
+		<resource>
+			<reference>
+				<!-- 资源示例 -->
+				<reference value="Observation/LaboratoryRoutineObservation003-example"/>
+			</reference>
+			<name value="血小板观测结果示例"/>
+			<description value="演示如何定义和引用白细胞观测结果的简单示例"/>
+			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/laboratory-routine-observation"/>
+		</resource>
+		
+		
+		<resource>
+			<reference>
+				<!-- ActivityDefinition资源示例 -->
+				<reference value="ActivityDefinition/ad-laboratory-request"/>
+			</reference>
+			<name value="实验室检验申请ActivityDefinition示例"/>
+			<description value="演示如何定义和引用实验室检验申请ActivityDefinition的简单示例"/>
+			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/ActivityDefinition"/>
+		</resource>
+
+		<resource>
+			<reference>
+				<!-- ActivityDefinition资源示例 -->
+				<reference value="ActivityDefinition/ad-laboratory-report-release"/>
+			</reference>
+			<name value="发布实验室检验报告ActivityDefinition示例"/>
+			<description value="演示如何定义和引用发布实验室检验报告ActivityDefinition的简单示例"/>
+			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/ActivityDefinition"/>
+		</resource>
+		
+		<resource>
+			<reference>
+				<!-- PlanDefinition资源示例 -->
+				<reference value="PlanDefinition/pd-regional-laboratory-inspection"/>
+			</reference>
+			<name value="住院双转的流程定义PlanDefinition示例"/>
+			<description value="演示如何定义和引用区域实验室检验的流程定义PlanDefinition的简单示例"/>
+			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/PlanDefinition"/>
+		</resource>
+
+		<resource>
+			<reference>
+				<!-- Bundle资源示例 -->
+				<reference value="Bundle/laboratory-request-example"/>
+			</reference>
+			<name value="实验室检验申请消息交换Bundle示例"/>
+			<description value="演示如何定义和引用实验室检验申请实际交互场景的数据交换Bundle示例"/>
+			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Bundle"/>
+		</resource>
+
+		
+
+		<resource>
+			<reference>
+				<!-- Bundle资源示例 -->
+				<reference value="Bundle/laboratory-report-release-example"/>
+			</reference>
+			<name value="发布实验室检验报告消息交换Bundle示例"/>
+			<description value="演示如何定义和引用发布实验室检验报告实际交互场景的数据交换Bundle示例"/>
+			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Bundle"/>
+		</resource>
+				
+		<resource>
+			<reference>
+				<!-- Bundle-RESTful资源示例 -->
+				<reference value="Bundle/laboratory-request-RESTful-example"/>
+			</reference>
+			<name value="实验室检验申请RESTful接口的Bundle示例"/>
+			<description value="演示如何定义和引用实验室检验申请实际交互场景的RESTful数据交换Bundle示例"/>
+			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Bundle"/>
+		</resource>
+
+		
+
+		<resource>
+			<reference>
+				<!-- Bundle资源示例 -->
+				<reference value="Bundle/laboratory-report-release-RESTful-example"/>
+			</reference>
+			<name value="发布实验室检验报告RESTful接口的Bundle示例"/>
+			<description value="演示如何定义和引用发布实验室检验报告实际交互场景的RESTful数据交换Bundle示例"/>
+			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Bundle"/>
+		</resource>
+		
+		<resource>
+			<reference>
+				<!-- MessageDefinition资源示例 -->
+				<reference value="MessageDefinition/md-laboratory-request"/>
+			</reference>
+			<name value="实验室检验申请消息定义MessageDefinition的示例"/>
+			<description value="演示如何定义和引用实验室检验申请消息定义MessageDefinition的示例"/>
+			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/MessageDefinition"/>
+		</resource>
+
+		
+
+		<resource>
+			<reference>
+				<!-- MessageDefinition资源示例 -->
+				<reference value="MessageDefinition/md-laboratory-report-release"/>
+			</reference>
+			<name value="发布实验室检验报告消息定义MessageDefinition的示例"/>
+			<description value="演示如何定义和引用发布实验室检验报告消息定义MessageDefinition的示例"/>
+			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/MessageDefinition"/>
+		</resource>
 		
 		
 		
