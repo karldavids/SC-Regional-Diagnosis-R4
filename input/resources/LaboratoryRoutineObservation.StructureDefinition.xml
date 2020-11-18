@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="laboratory-routine-observation" />
-  <url value="http://fhir.scwjxx.cn/SiChuan/StructureDefinition/laboratory-routine-observation" />
+  <url value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/laboratory-routine-observation" />                    
   <name value="LaboratoryRoutineObservation" />
   <title value="常规检验观察结果" />
   <status value="draft" />
