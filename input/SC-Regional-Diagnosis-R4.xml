@@ -44,7 +44,37 @@
 		
 		
 		
-		
+		<resource>
+			<reference>
+				<!-- 本地资源定义（LaboratoryRequest） -->
+				<reference value="StructureDefinition/laboratory-request"/>
+			</reference>
+			<description value="描述医院内 临床医生对患者提交实验室检验申请的资源。"/>
+		</resource>
+
+		<resource>
+			<reference>
+				<!-- 本地资源定义（LaboratoryReport） -->
+				<reference value="StructureDefinition/laboratory-report"/>
+			</reference>
+			<description value="对患者、患者组从中提取的标本进行的诊断试验的结果和解释。此报告包括了临床场景（如申请单、提供者信息），有些报告将单项指标结果、图像、文本和带编码的解释、以及带格式的诊断报告"/>
+		</resource>
+
+		<resource>
+			<reference>
+				<!-- 本地资源定义（LaboratoryRoutineObservation） -->
+				<reference value="StructureDefinition/laboratory-routine-observation"/>
+			</reference>
+			<description value="描述实验室常规检验的详细检验结果的反馈，如 生化检验、血液检验、临检检验。"/>
+		</resource>
+
+		<resource>
+			<reference>
+				<!-- 本地资源定义（LaboratorySpecimen） -->
+				<reference value="StructureDefinition/laboratory-specimen"/>
+			</reference>
+			<description value="在医院实验室检验中，用于分析的样品。"/>
+		</resource>
 		<!--<resource>
 <reference>
 <reference value="MyLogicalModel/AS"/>
