@@ -97,7 +97,7 @@
   <!-- 0..* 检验结果-->
   <result>
     <!-- 0..1  Reference(Observation）关联观测结果信息 -->
-    <reference value="Observation/LaboratoryRoutineObservation001-example"/>
+    <reference value=""/>
   </result>
   <!--<result>
     --><!-- 0..1  Reference(Observation）关联观测结果信息 --><!--
