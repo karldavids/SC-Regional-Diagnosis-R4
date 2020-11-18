@@ -8,7 +8,7 @@
 
 
   <!-- 1..1  观测结果状态  -->
-  <status>
+  <status value="final">
     <extension url="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/resource-status">
       <valueCoding>
         <!-- 0..1 观测结果状态 CodeSystem url  地址(registered | preliminary | final | amended + )-->
