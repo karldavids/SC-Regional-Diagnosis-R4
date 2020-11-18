@@ -88,9 +88,7 @@
 			</reference>
 			<name value="实验室检验申请示例"/>
 			<description value="演示如何定义和引用实验室检验申请的简单示例"/>
-			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/laboratory-request"/>
 		</resource>
-
 
 		<resource>
 			<reference>
@@ -99,11 +97,8 @@
 			</reference>
 			<name value="实验室检验报告示例"/>
 			<description value="演示如何定义和引用实验室检验报告的简单示例"/>
-			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/laboratory-report"/>
 		</resource>
-		
-		
-		
+				
 		<resource>
 			<reference>
 				<!-- 资源示例 -->
@@ -111,7 +106,6 @@
 			</reference>
 			<name value="发布实验室检验报告示例"/>
 			<description value="演示如何定义和引用发布实验室检验报告的简单示例"/>
-			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Task"/>
 		</resource>
 
 		<resource>
@@ -121,7 +115,6 @@
 			</reference>
 			<name value="实验室检验标本示例"/>
 			<description value="演示如何定义和引用实验室检验标本的简单示例"/>
-			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/laboratory-specimen"/>
 		</resource>
 		
 		<resource>
@@ -130,8 +123,7 @@
 				<reference value="Observation/LaboratoryRoutineObservation001-example"/>
 			</reference>
 			<name value="红细胞观测结果示例"/>
-			<description value="演示如何定义和引用红细胞观测结果的简单示例"/>
-			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/laboratory-routine-observation"/>
+			<description value="演示如何定义和引用红细胞观测结果的简单示例"/>	
 		</resource>
 		
 		<resource>
@@ -140,8 +132,7 @@
 				<reference value="Observation/LaboratoryRoutineObservation002-example"/>
 			</reference>
 			<name value="白细胞观测结果示例"/>
-			<description value="演示如何定义和引用白细胞观测结果的简单示例"/>
-			<exampleCanonical value="http://StructureDefinition.hl7fhir.cn/laboratory-routine-observation"/>
+			<description value="演示如何定义和引用白细胞观测结果的简单示例"/>		
 		</resource>
 		
 		<resource>
