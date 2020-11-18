@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="Media" />
+  <url value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Media" />
+  <name value="Media" />
+  <title value="影像媒体" />
+  <status value="draft" />
+  <description value="在医疗保健中获取或使用的照片，视频或音频记录" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="workflow" />
+    <uri value="http://hl7.org/fhir/workflow" />
+    <name value="Workflow Pattern" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="dicom" />
+    <uri value="http://nema.org/dicom" />
+    <name value="DICOM Tag Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="sct-concept" />
+    <uri value="http://snomed.info/conceptdomain" />
+    <name value="SNOMED CT Concept Domain Binding" />
+  </mapping>
+  <mapping>
+    <identity value="sct-attr" />
+    <uri value="http://snomed.org/attributebinding" />
+    <name value="SNOMED CT Attribute Binding" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Media" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Media" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Media">
+      <path value="Media" />
+      <short value="影像媒体" />
+      <definition value="在医疗保健中获取或使用的照片，视频或音频记录" />
+    </element>
+    <element id="Media.identifier">
+      <path value="Media.identifier" />
+      <type>
+        <code value="Identifier" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Identifier" />
+      </type>
+    </element>
+    <element id="Media.basedOn">
+      <path value="Media.basedOn" />
+      <short value="导致创建此媒体的过程" />
+      <definition value="该媒体给予的哪个申请，" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Reference" />
+      </type>
+    </element>
+    <element id="Media.partOf">
+      <path value="Media.partOf" />
+      <short value="父媒体" />
+      <definition value="该媒体属于哪一个媒体的一部分" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Reference" />
+      </type>
+    </element>
+    <element id="Media.status">
+      <path value="Media.status" />
+      <short value="状态" />
+      <definition value="当前媒体的状态&#xD;&#xA;preparation | in-progress | not-done | on-hold | stopped | completed | entered-in-error | unknown" />
+    </element>
+    <element id="Media.type">
+      <path value="Media.type" />
+      <short value="影像类型" />
+      <definition value="描述影像类型，包括 image, video, or audio" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/CodeableConcept" />
+      </type>
+    </element>
+    <element id="Media.modality">
+      <path value="Media.modality" />
+      <short value="采集模式" />
+      <definition value="有关图像类型的详细信息-图像的类型，用途或用于生成图像的设备的类型。" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/CodeableConcept" />
+      </type>
+    </element>
+    <element id="Media.view">
+      <path value="Media.view" />
+      <short value="成像视图" />
+      <definition value="成像视图，例如，横向或前后" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/CodeableConcept" />
+      </type>
+    </element>
+    <element id="Media.subject">
+      <path value="Media.subject" />
+      <short value="患者" />
+      <definition value="媒体记录的主体" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Reference" />
+      </type>
+    </element>
+    <element id="Media.encounter">
+      <path value="Media.encounter" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Reference" />
+      </type>
+    </element>
+    <element id="Media.created[x]">
+      <path value="Media.created[x]" />
+      <short value="采集时间" />
+      <definition value="收集媒介的日期和时间。" />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="Media.issued">
+      <path value="Media.issued" />
+      <short value="发布时间" />
+      <definition value="发布该版本的日期/时间" />
+    </element>
+    <element id="Media.operator">
+      <path value="Media.operator" />
+      <short value="生成图像的人" />
+      <definition value="管理图像集合的人。" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Reference" />
+      </type>
+    </element>
+    <element id="Media.reasonCode">
+      <path value="Media.reasonCode" />
+      <short value="采集图像原因" />
+      <definition value="描述事件以编码或文本形式发生的原因。" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/CodeableConcept" />
+      </type>
+    </element>
+    <element id="Media.bodySite">
+      <path value="Media.bodySite" />
+      <short value="采集部位" />
+      <definition value="图像采集的部位" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/CodeableConcept" />
+      </type>
+    </element>
+    <element id="Media.deviceName">
+      <path value="Media.deviceName" />
+      <short value="设备名称" />
+      <definition value="设备名称" />
+    </element>
+    <element id="Media.device">
+      <path value="Media.device" />
+      <short value="设备" />
+      <definition value="引用采集该图像的设备资源" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Reference" />
+      </type>
+    </element>
+    <element id="Media.height">
+      <path value="Media.height" />
+      <short value="高" />
+      <definition value="图像的高度(以像素为单位)(照片/视频)。" />
+    </element>
+    <element id="Media.width">
+      <path value="Media.width" />
+      <short value="宽" />
+      <definition value="图像的宽度(像素)(照片/视频)。" />
+    </element>
+    <element id="Media.frames">
+      <path value="Media.frames" />
+      <short value="帧数" />
+      <definition value="一张照片的帧数。它用于多页传真，或在单个图像或动画gif中采用多个切片的图像获取上下文。如果有一个以上的框架，这应该有一个值，以提醒界面软件，需要一个多框架能力的渲染小部件。" />
+    </element>
+    <element id="Media.duration">
+      <path value="Media.duration" />
+      <short value="秒数 (audio / video)" />
+      <definition value="录音的持续时间(以秒为单位)-用于音频和视频。" />
+    </element>
+    <element id="Media.content">
+      <path value="Media.content" />
+      <short value="媒体文件" />
+      <definition value="媒体的实际内容-内联或直接引用到媒体源文件。" />
+      <type>
+        <code value="Attachment" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Attachment" />
+      </type>
+    </element>
+    <element id="Media.note">
+      <path value="Media.note" />
+      <short value="备注" />
+      <definition value="该媒体的备注信息" />
+      <type>
+        <code value="Annotation" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Annotation" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

@@ -248,6 +248,11 @@
 			<description value="演示如何定义和引用发布实验室检验报告实际交互场景的数据交换Bundle示例"/>
 			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Bundle"/>
 		</resource>
+
+
+
+
+		
 		
 
 		<!--    <resource>
