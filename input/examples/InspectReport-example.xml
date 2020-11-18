@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DiagnosticReport xmlns="http://hl7.org/fhir">
+
+	<!--0..1 检查报告ID-->
+	<id value="InspectReport-example"/>
+	<meta>
+		<profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/inspect-report"/>
+	</meta>
+
+	<!-- 0..* 检查报告编号 -->
+	<identifier>
+		<!--0..1 检查报告编号NamingSystem uri-->
+		<system value="http://fhir.scwjxx.cn/Sichuan/NamingSystem/inspect-report-identity"/>
+		<!-- 0..1 检查报告编号 -->
+		<value value="SYSBG0000QWERTY"/>
+	</identifier>
+
+	<!-- 0..* 申请单信息 -->
+	<basedOn>
+		<!-- 0..1  Reference(ServiceRequest）关联申请单信息 -->
+		<reference value="ServiceRequest/InspectRequest-example"/>
+	</basedOn>
+
+	<!-- 1..1  报告状态  -->
+	<status >
+		<extension url="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/resource-status">
+			<valueCoding>
+				<!-- 0..1 报告状态 CodeSystem url  地址(registered | partial | preliminary | final +  )-->
+				<system value="http://hl7.org/fhir/diagnostic-report-status"/>
+				<!-- 0..1 报告状态代码-->
+				<code value="final"/>
+				<!-- 0..1 报告状态说明 -->
+				<display value=" final "/>
+			</valueCoding>
+		</extension>
+	</status>
+
+	<!-- 0..* 检查分类 -->
+	<category>
+		<coding>
+			<!-- 0..1 检查分类 CodeSystem url  地址-->
+			<system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/inspect-type"/>
+			<!-- 0..1 检查分类代码-->
+			<code value="01"/>
+			<!-- 0..1 检查分类说明 -->
+			<display value="CT"/>
+		</coding>
+	</category>
+
+	<!-- 1..1 检查项目（包）代码 -->
+	<code>
+		<coding>
+			<!-- 0..1 检查项目（包）代码 CodeSystem url  地址-->
+			<system value="http://CodeSystem.hl7fhir.cn/procedure-code"/>
+			<!-- 0..1 检查项目（包）代码-->
+			<code value="A0001"/>
+			<!-- 0..1 检查项目（包）说明 -->
+			<display value="CT头部增强"/>
+		</coding>
+	</code>
+
+	<!-- 0..1 患者信息 -->
+	<subject>
+		<!-- 0..1  Reference(Patient）关联患者信息 -->
+		<reference value="Patient/Patient001-example"/>
+	</subject>
+	<!-- 0..1 医疗事件 -->
+	<encounter>
+		<!-- 0..1  Reference(Encounter）关联医疗事件信息 -->
+		<reference value="Encounter/EncounterHospitalized001-example"/>
+	</encounter>
+
+	<!-- 0..1 发布报告时间 -->
+	<issued value="2019-02-10T13:00:00Z"/>
+
+	<!-- 0..* 检查医师 -->
+	<performer>
+		<!-- 0..1  Reference(Practitioner）关联医护人员信息 -->
+		<reference value="Practitioner/Practitioner001-example"/>
+	</performer>
+
+	<!-- 0..* 发布报告者 -->
+	<resultsInterpreter>
+		<!-- 0..1  Reference(Practitioner）关联医护人员信息 -->
+		<reference value="Practitioner/Practitioner001-example"/>
+	</resultsInterpreter>
+
+	<!-- 0..* 报告媒体 -->
+	<media>
+		<!-- 0..1 报告媒体评论信息 -->
+		<comment value="报告媒体评论信息"/>
+
+		<!-- 1..1 媒体信息 -->
+		<link>
+			<reference value="Media/Media001-example"/>
+		</link>
+	</media>
+	<!-- 0..1 检查结论文字描述 -->
+	<conclusion value="患者CT头部检查无异常。"/>
+</DiagnosticReport>

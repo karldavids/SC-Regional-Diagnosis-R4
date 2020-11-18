@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Media xmlns="http://hl7.org/fhir">
+	<id value="Media001-example"/>
+	<meta>
+		<profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Media"/>
+	</meta>
+	<!-- 0..* 媒体编号 -->
+	<identifier>
+		<!--0..1 媒体编号NamingSystem uri-->
+		<system value="http://fhir.scwjxx.cn/Sichuan/NamingSystem/media-identity"/>
+		<!-- 0..1 媒体编号 -->
+		<value value="SYSBG0000QWERTY"/>
+	</identifier>
+	<!-- 0..* 申请单信息 -->
+	<basedOn>
+		<!-- 0..1  Reference(ServiceRequest）关联申请单信息 -->
+		<reference value="ServiceRequest/InspectRequest-example"/>
+	</basedOn>
+	<!-- 1..1 状态 -->
+	<status value="completed"/>
+	<!-- 0..1 患者信息 -->
+	<subject>
+		<!-- 0..1  Reference(Patient）关联患者信息 -->
+		<reference value="Patient/Patient001-example"/>
+	</subject>
+	<!-- 0..1 医疗事件 -->
+	<encounter>
+		<!-- 0..1  Reference(Encounter）关联医疗事件信息 -->
+		<reference value="Encounter/EncounterHospitalized001-example"/>
+	</encounter>
+	<!-- 0..1 图像发布日期 -->
+	<issued value="2019-02-10T13:00:00Z"/>
+
+
+	<!-- 1..1 图像附件信息 -->
+	<content>
+		<!-- 0..1 图像数据 base64 -->
+		<data value="[base64Binary]"/>
+		<!-- 0..1 图像url -->
+		<url value="[url]"/>
+		<!-- 0..1 图像标题 -->
+		<title value="[string]"/>
+	</content>
+</Media>
