@@ -158,7 +158,7 @@
 			<description value="演示如何定义和引用实验室检验申请的简单示例"/>
 		</resource>
 
-		
+
 
 		<resource>
 			<reference>
@@ -186,6 +186,15 @@
 			<name value="血小板观测结果示例"/>
 			<description value="演示如何定义和引用白细胞观测结果的简单示例"/>
 
+		</resource>
+
+		<resource>
+			<reference>
+				<!-- 资源示例 -->
+				<reference value="Task/LaboratoryReportRelease-example"/>
+			</reference>
+			<name value="发布实验室检验报告示例"/>
+			<description value="演示如何定义和引用发布实验室检验报告的简单示例"/>
 		</resource>
 		
 
