@@ -34,10 +34,10 @@
     </coding>
   </code>
   <!-- 0..1 任务描述 -->
-  <description value="实验室检验标本后，根据申请单的要求，发布对应的报告信息"/>
+  <description value="医生下达检验申请后，根据申请单的要求，执行检查操作，发布对应的报告信息"/>
   <!-- 0..1 Reference(Any) 关联该任务正在处理的资源 -->
   <focus>
-    <reference value="DiagnosticReport/LaboratoryReport-example"/>
+    <reference value="DiagnosticReport/InspectReport-example"/>
   </focus>
   <!-- ?? 0..1 任务创建日期 -->
   <authoredOn value="2019-02-10T13:00:00Z"/>
