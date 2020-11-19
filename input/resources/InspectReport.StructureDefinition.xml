@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="inspect-report" />
-  <url value="http://example.org/fhir/StructureDefinition/inspect-report" />
+  <url value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/inspect-report" />                
   <name value="InspectReport" />
   <title value="检查报告" />
   <status value="draft" />
@@ -96,7 +96,7 @@
       <binding>
         <strength value="required" />
         <description value="检查报告状态" />
-        <valueSet value="http://ValueSet.hl7fhir.cn/diagnostic-report-status-vs" />
+        <valueSet value="http://fhir.scwjxx.cn/Sichuan/ValueSet/diagnostic-report-status-vs" />
       </binding>
     </element>
     <element id="DiagnosticReport.category">
@@ -124,7 +124,7 @@
         </extension>
         <strength value="example" />
         <description value="检查分类代码表" />
-        <valueSet value="http://ValueSet.hl7fhir.cn/inspectrequest-category-vs" />
+        <valueSet value="http://fhir.scwjxx.cn/Sichuan/ValueSet/inspectrequest-category-vs" />
       </binding>
     </element>
     <element id="DiagnosticReport.category:otherCategory">
@@ -148,7 +148,7 @@
         </extension>
         <strength value="preferred" />
         <description value="检查报告分类代码" />
-        <valueSet value="http://ValueSet.hl7fhir.cn/report-codes-vs" />
+        <valueSet value="http://fhir.scwjxx.cn/Sichuan/ValueSet/report-codes-vs" />
       </binding>
     </element>
     <element id="DiagnosticReport.subject">

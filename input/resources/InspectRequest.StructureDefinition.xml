@@ -125,7 +125,7 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="http://ValueSet.hl7fhir.cn/request-status-vs" />
+        <valueSet value="http://fhir.scwjxx.cn/Sichuan/ValueSet/request-status-vs" />
       </binding>
     </element>
     <element id="ServiceRequest.intent">
@@ -156,7 +156,7 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="http://ValueSet.hl7fhir.cn/request-intent-vs" />
+        <valueSet value="http://fhir.scwjxx.cn/Sichuan/ValueSet/request-intent-vs" />
       </binding>
     </element>
     <element id="ServiceRequest.category">
@@ -178,7 +178,7 @@
       <binding>
         <strength value="example" />
         <description value="检查分类代码表" />
-        <valueSet value="http://ValueSet.hl7fhir.cn/inspectrequest-category-vs" />
+        <valueSet value="http://fhir.scwjxx.cn/Sichuan/ValueSet/inspectrequest-category-vs" />
       </binding>
     </element>
     <element id="ServiceRequest.category:otherCategory">
@@ -221,7 +221,7 @@
       <definition value="标识检查服务的代码" />
       <binding>
         <strength value="example" />
-        <valueSet value="http://ValueSet.hl7fhir.cn/procedure-code-vs" />
+        <valueSet value="http://fhir.scwjxx.cn/Sichuan/ValueSet/procedure-code-vs" />
       </binding>
     </element>
     <element id="ServiceRequest.orderDetail">
@@ -230,7 +230,7 @@
       <definition value="关于 检验服务的细节和说明。比如检验的明细项目。&#xD;&#xA;关于服务的其他细节和说明。例如，导尿管的订单可能会有外置或留置导尿管的订单细节，或者绷带的订单可能需要额外的说明说明如何使用绷带。" />
       <binding>
         <strength value="example" />
-        <valueSet value="http://ValueSet.hl7fhir.cn/inspectrequest-orderdetail-vs" />
+        <valueSet value="http://fhir.scwjxx.cn/Sichuan/ValueSet/inspectrequest-orderdetail-vs" />
       </binding>
     </element>
     <element id="ServiceRequest.quantity[x]">
@@ -324,7 +324,7 @@
       <binding>
         <strength value="example" />
         <description value="诊断疾病或诊断的鉴别。" />
-        <valueSet value="http://ValueSet.hl7fhir.cn/condition-code-vs" />
+        <valueSet value="http://fhir.scwjxx.cn/Sichuan/ValueSet/condition-code-vs" />
       </binding>
     </element>
     <element id="ServiceRequest.reasonCode:ChiefComplaint">
@@ -336,7 +336,7 @@
       <binding>
         <strength value="example" />
         <description value="卫生信息数据元目录" />
-        <valueSet value="http://ValueSet.hl7fhir.cn/health-data-element-dictionary-vs" />
+        <valueSet value="http://fhir.scwjxx.cn/Sichuan/ValueSet/health-data-element-dictionary-vs" />
       </binding>
     </element>
     <element id="ServiceRequest.reasonCode:ChiefComplaint.coding">
@@ -354,7 +354,7 @@
       <binding>
         <strength value="example" />
         <description value="卫生信息数据元目录" />
-        <valueSet value="http://ValueSet.hl7fhir.cn/health-data-element-dictionary-vs" />
+        <valueSet value="http://fhir.scwjxx.cn/Sichuan/ValueSet/health-data-element-dictionary-vs" />
       </binding>
     </element>
     <element id="ServiceRequest.reasonCode:PreviousHistory.coding">
@@ -411,7 +411,7 @@
       <definition value="应该进行检查的位置。这是人体学部位" />
       <binding>
         <strength value="example" />
-        <valueSet value="http://ValueSet.hl7fhir.cn/body-site-vs" />
+        <valueSet value="http://fhir.scwjxx.cn/Sichuan/ValueSet/body-site-vs" />
       </binding>
     </element>
     <element id="ServiceRequest.note">

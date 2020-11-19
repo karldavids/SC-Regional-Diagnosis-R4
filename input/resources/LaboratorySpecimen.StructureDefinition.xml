@@ -79,7 +79,7 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="http://ValueSet.hl7fhir.cn/specimen-status-vs" />
+        <valueSet value="http://fhir.scwjxx.cn/Sichuan/ValueSet/specimen-status-vs" />
       </binding>
     </element>
     <element id="Specimen.type">
@@ -93,7 +93,7 @@
       <binding>
         <strength value="example" />
         <description value="标本类型" />
-        <valueSet value="http://ValueSet.hl7fhir.cn/specimen-type-vs" />
+        <valueSet value="http://fhir.scwjxx.cn/Sichuan/ValueSet/specimen-type-vs" />
       </binding>
     </element>
     <element id="Specimen.subject">
@@ -170,7 +170,7 @@
       </type>
       <binding>
         <strength value="example" />
-        <valueSet value="http://ValueSet.hl7fhir.cn/specimen-collection-method-vs" />
+        <valueSet value="http://fhir.scwjxx.cn/Sichuan/ValueSet/specimen-collection-method-vs" />
       </binding>
     </element>
     <element id="Specimen.collection.bodySite">
@@ -184,7 +184,7 @@
       <binding>
         <strength value="example" />
         <description value="采集部位信息" />
-        <valueSet value="http://ValueSet.hl7fhir.cn/body-site-vs" />
+        <valueSet value="http://fhir.scwjxx.cn/Sichuan/ValueSet/body-site-vs" />
       </binding>
     </element>
     <element id="Specimen.collection.fastingStatus[x]">

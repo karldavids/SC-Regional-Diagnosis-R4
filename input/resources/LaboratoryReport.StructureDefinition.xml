@@ -103,7 +103,7 @@
       <binding>
         <strength value="required" />
         <description value="检验报告状态" />
-        <valueSet value="http://ValueSet.hl7fhir.cn/diagnostic-report-status-vs" />
+        <valueSet value="http://fhir.scwjxx.cn/Sichuan/ValueSet/diagnostic-report-status-vs" />
       </binding>
     </element>
     <element id="DiagnosticReport.category">
@@ -129,7 +129,7 @@
       <binding>
         <strength value="example" />
         <description value="实验室检验分类代码表" />
-        <valueSet value="http://ValueSet.hl7fhir.cn/laboratoryrequest-category-vs" />
+        <valueSet value="http://fhir.scwjxx.cn/Sichuan/ValueSet/laboratoryrequest-category-vs" />
       </binding>
     </element>
     <element id="DiagnosticReport.category:otherCategory">
@@ -149,7 +149,7 @@
       <binding>
         <strength value="preferred" />
         <description value="检验报告分类代码" />
-        <valueSet value="http://ValueSet.hl7fhir.cn/procedure-code-vs" />
+        <valueSet value="http://fhir.scwjxx.cn/Sichuan/ValueSet/procedure-code-vs" />
       </binding>
     </element>
     <element id="DiagnosticReport.subject">
