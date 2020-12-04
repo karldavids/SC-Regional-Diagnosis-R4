@@ -51,7 +51,7 @@
 	<code>
 		<coding>
 			<!-- 0..1 检查项目（包）代码 CodeSystem url  地址-->
-			<system value="http://CodeSystem.hl7fhir.cn/procedure-code"/>
+			<system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/procedure-code"/>
 			<!-- 0..1 检查项目（包）代码-->
 			<code value="A0001"/>
 			<!-- 0..1 检查项目（包）说明 -->

@@ -57,7 +57,7 @@
       <definition value="该观察结果基于的报告" />
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.scwjxx.cn/SiChuan/StructureDefinition/Reference" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Reference" />
       </type>
     </element>
     <element id="Observation.partOf">
@@ -87,7 +87,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://fhir.scwjxx.cn/SiChuan/StructureDefinition/resource-status" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/resource-status" />
       </type>
       <binding>
         <strength value="required" />
@@ -107,7 +107,7 @@
       <definition value="为搜索、排序和显示目的而对服务进行分类的代码。如：生化检验、凝血检验" />
       <type>
         <code value="CodeableConcept" />
-        <profile value="http://fhir.scwjxx.cn/SiChuan/StructureDefinition/CodeableConcept" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/CodeableConcept" />
       </type>
     </element>
     <element id="Observation.category:CategoryCode">
@@ -134,7 +134,7 @@
       <definition value="描述此检验报告中该项目代码或名称。" />
       <type>
         <code value="CodeableConcept" />
-        <profile value="http://fhir.scwjxx.cn/SiChuan/StructureDefinition/CodeableConcept" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/CodeableConcept" />
       </type>
       <binding>
         <strength value="example" />
@@ -148,7 +148,7 @@
       <definition value="描述被观测的对象，这里是患者信息" />
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.scwjxx.cn/SiChuan/StructureDefinition/Reference" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Reference" />
       </type>
     </element>
     <element id="Observation.focus">
@@ -157,7 +157,7 @@
       <definition value="观察的实际焦点，不是记录的患者代表与患者相关的某物或某人，例如配偶，父母，胎儿或供体。例如，母亲记录中的胎儿观察。观察的重点还可以是现有状况，干预措施，受试者的饮食，受试者的另一观察或身体结构，例如肿瘤或植入的设备。一个示例用例将使用“观察”资源来捕获母亲是否接受过培训以更换孩子的气管造口管。在此示例中，孩子是记录的患者，母亲是重点。" />
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.scwjxx.cn/SiChuan/StructureDefinition/Reference" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Reference" />
       </type>
     </element>
     <element id="Observation.encounter">
@@ -166,7 +166,7 @@
       <definition value="进行此观察的医疗保健事件(例如患者和医疗保健提供者交互)。" />
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.scwjxx.cn/SiChuan/StructureDefinition/Reference" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Reference" />
       </type>
     </element>
     <element id="Observation.effective[x]">
@@ -188,7 +188,7 @@
       <definition value="这里描述谁来做的这一次观察，这里主要指 检验技师。" />
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.scwjxx.cn/SiChuan/StructureDefinition/Reference" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Reference" />
       </type>
     </element>
     <element id="Observation.dataAbsentReason">
@@ -196,7 +196,7 @@
       <max value="0" />
       <type>
         <code value="CodeableConcept" />
-        <profile value="http://fhir.scwjxx.cn/SiChuan/StructureDefinition/CodeableConcept" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/CodeableConcept" />
       </type>
     </element>
     <element id="Observation.interpretation">
@@ -205,7 +205,7 @@
       <definition value="对观察值的绝对评估。例如，高，低，正常。" />
       <type>
         <code value="CodeableConcept" />
-        <profile value="http://fhir.scwjxx.cn/SiChuan/StructureDefinition/CodeableConcept" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/CodeableConcept" />
       </type>
       <binding>
         <strength value="extensible" />
@@ -219,7 +219,7 @@
       <definition value="对观察或结果的备注信息" />
       <type>
         <code value="Annotation" />
-        <profile value="http://fhir.scwjxx.cn/SiChuan/StructureDefinition/Annotation" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Annotation" />
       </type>
     </element>
     <element id="Observation.bodySite">
@@ -232,7 +232,7 @@
       <definition value="指示用于执行观察的机制。" />
       <type>
         <code value="CodeableConcept" />
-        <profile value="http://fhir.scwjxx.cn/SiChuan/StructureDefinition/CodeableConcept" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/CodeableConcept" />
       </type>
     </element>
     <element id="Observation.specimen">
@@ -241,7 +241,7 @@
       <definition value="描述该检测值使用的标本" />
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.scwjxx.cn/SiChuan/StructureDefinition/Reference" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Reference" />
       </type>
     </element>
     <element id="Observation.device">
@@ -250,7 +250,7 @@
       <definition value="描述该检测值检测的设备" />
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.scwjxx.cn/SiChuan/StructureDefinition/Reference" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Reference" />
       </type>
     </element>
     <element id="Observation.referenceRange">
@@ -274,7 +274,7 @@
       <definition value="指示它适用于目标参考总体的哪一部分的代码。例如，正常范围或治疗范围。" />
       <type>
         <code value="CodeableConcept" />
-        <profile value="http://fhir.scwjxx.cn/SiChuan/StructureDefinition/CodeableConcept" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/CodeableConcept" />
       </type>
     </element>
     <element id="Observation.referenceRange.appliesTo">
@@ -295,7 +295,7 @@
       <path value="Observation.hasMember" />
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.scwjxx.cn/SiChuan/StructureDefinition/Reference" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Reference" />
       </type>
     </element>
     <element id="Observation.derivedFrom">
@@ -304,7 +304,7 @@
       <definition value="表示度量的目标资源，从该度量派生此观察值。例如，计算阴离子间隙或基于超声图像的胎儿测量。" />
       <type>
         <code value="Reference" />
-        <profile value="http://fhir.scwjxx.cn/SiChuan/StructureDefinition/Reference" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/Reference" />
       </type>
     </element>
     <element id="Observation.component">
@@ -318,7 +318,7 @@
       <definition value="描述观察到的情况。有时这被称为观察“代码”，描述的是观察明细的代码。" />
       <type>
         <code value="CodeableConcept" />
-        <profile value="http://fhir.scwjxx.cn/SiChuan/StructureDefinition/CodeableConcept" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/CodeableConcept" />
       </type>
     </element>
     <element id="Observation.component.value[x]">
@@ -336,7 +336,7 @@
       <definition value="对观察值的绝对评估。例如，高，低，正常。" />
       <type>
         <code value="CodeableConcept" />
-        <profile value="http://fhir.scwjxx.cn/SiChuan/StructureDefinition/CodeableConcept" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/CodeableConcept" />
       </type>
       <binding>
         <strength value="extensible" />
@@ -365,7 +365,7 @@
       <definition value="指示它适用于目标参考总体的哪一部分的代码。例如，正常范围或治疗范围。" />
       <type>
         <code value="CodeableConcept" />
-        <profile value="http://fhir.scwjxx.cn/SiChuan/StructureDefinition/CodeableConcept" />
+        <profile value="http://fhir.scwjxx.cn/Sichuan/StructureDefinition/CodeableConcept" />
       </type>
     </element>
     <element id="Observation.component.referenceRange.appliesTo">
