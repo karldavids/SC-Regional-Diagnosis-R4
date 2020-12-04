@@ -455,7 +455,7 @@
 		<resource>
 			<reference>
 				<!-- 检验分类代码 -->
-				<reference value="ValueSet/request-status-vs"/>
+				<reference value="ValueSet/laboratoryrequest-category-vs"/>
 			</reference>
 			<name value="检验分类代码"/>
 			<description value="检验分类代码，检验分类，生化检验、凝血检验"/>

@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir"> 
 	<id value="laboratoryrequest-category-vs"/>
  <url value="http://fhir.scwjxx.cn/Sichuan/ValueSet/laboratoryrequest-category-vs"/>
- <name value="request-status-vs"/><!-- ?? 0..1 Name for this value set (computer friendly) -->
+ <name value="laboratoryrequest-category-vs"/><!-- ?? 0..1 Name for this value set (computer friendly) -->
  <title value="检验分类代码"/><!-- 0..1 Name for this value set (human friendly) -->
  <status value="draft"/><!-- 1..1 draft | active | retired | unknown -->
   <description value="检验分类代码，检验分类，生化检验、凝血检验"/>
