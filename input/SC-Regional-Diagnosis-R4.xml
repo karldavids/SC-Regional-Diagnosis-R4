@@ -422,7 +422,136 @@
 			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Bundle"/>
 		</resource>
 
-
+<resource>
+			<reference>
+				<!-- 报告状态 -->
+				<reference value="ValueSet/diagnostic-report-status-vs"/>
+			</reference>
+			<name value="报告状态"/>
+			<description value="描述临床报告在生命周期内的所有状态"/>
+		</resource>
+		
+		
+		<resource>
+			<reference>
+				<!-- 签约类型 -->
+				<reference value="ValueSet/inspectrequest-category-vs"/>
+			</reference>
+			<name value="检查分类代码"/>
+			<description value="检查分类代码，如：CT检查、超声检查，MIR检查，胃肠，电生理"/>
+		</resource>
+		
+		
+		<resource>
+			<reference>
+				<!-- 检验结果代码 -->
+				<reference value="ValueSet/laboratory-observation-interpretation-vs"/>
+			</reference>
+			<name value="检验结果代码"/>
+			<description value="检验结果代码 对观察值的绝对评估。例如，高，低，正常。"/>
+		</resource>
+		
+		
+		<resource>
+			<reference>
+				<!-- 检验分类代码 -->
+				<reference value="ValueSet/request-status-vs"/>
+			</reference>
+			<name value="检验分类代码"/>
+			<description value="检验分类代码，检验分类，生化检验、凝血检验"/>
+		</resource>
+		
+		
+		<resource>
+			<reference>
+				<!-- 检验明细 -->
+				<reference value="ValueSet/laboratoryrequest-orderdetail-vs"/>
+			</reference>
+			<name value="检验明细"/>
+			<description value="检验明细，描述整个检验项目的最明细项目编码。"/>
+		</resource>
+		
+		
+		<resource>
+			<reference>
+				<!-- 观察状态 -->
+				<reference value="ValueSet/observation-status-vs"/>
+			</reference>
+			<name value="观察状态"/>
+			<description value="观察状态，描述观察结果在生个生命周期内的状态。"/>
+		</resource>
+		
+		
+		<resource>
+			<reference>
+				<!-- 检查代码 -->
+				<reference value="ValueSet/procedure-code-vs"/>
+			</reference>
+			<name value="检查代码"/>
+			<description value="检查项目的代码"/>
+		</resource>
+		
+		
+		<resource>
+			<reference>
+				<!-- 服务申请意图 -->
+				<reference value="ValueSet/request-intent-vs"/>
+			</reference>
+			<name value="服务申请意图"/>
+			<description value="描述服务的申请意图代码"/>
+		</resource>
+		
+		
+		<resource>
+			<reference>
+				<!-- 服务申请优先级 -->
+				<reference value="ValueSet/request-priority-vs"/>
+			</reference>
+			<name value="服务申请优先级"/>
+			<description value="描述整个服务优先级的编码系统。"/>
+		</resource>
+		
+		
+		<resource>
+			<reference>
+				<!-- 服务申请状态 -->
+				<reference value="ValueSet/request-status-vs"/>
+			</reference>
+			<name value="服务申请状态"/>
+			<description value="描述服务在整个流程中的状态变化情况。"/>
+		</resource>
+		
+		
+		<resource>
+			<reference>
+				<!-- 标本采集方法 -->
+				<reference value="ValueSet/specimen-collection-method-vs"/>
+			</reference>
+			<name value="标本采集方法"/>
+			<description value="标本采集方法，描述在采集标本的时候采用的方法。"/>
+		</resource>
+		
+		<resource>
+			<reference>
+				<!-- 标本状态 -->
+				<reference value="ValueSet/specimen-status-vs"/>
+			</reference>
+			<name value="标本状态"/>
+			<description value="标本状态，描述标本在整个生命周期内的状态变化。"/>
+		</resource>
+		
+		
+		<resource>
+			<reference>
+				<!-- 标本类型 -->
+				<reference value="ValueSet/specimen-type-vs"/>
+			</reference>
+			<name value="标本类型"/>
+			<description value="标本类型，包括尿液，体液，血液，其他等。"/>
+		</resource>
+		
+		
+		
 
 		<!--    <resource>
       <reference>

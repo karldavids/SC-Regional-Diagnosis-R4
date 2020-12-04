@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir"> 
+	<id value="specimen-type-vs"/>
+ <url value="http://fhir.scwjxx.cn/Sichuan/ValueSet/specimen-type-vs"/>
+ <name value="specimen-type-vs"/><!-- ?? 0..1 Name for this value set (computer friendly) -->
+ <title value="标本类型"/><!-- 0..1 Name for this value set (human friendly) -->
+ <status value="draft"/><!-- 1..1 draft | active | retired | unknown -->
+  <description value="标本类型，包括尿液，体液，血液，其他等。"/>
+ <compose>  <!-- 0..1 Content logical definition of the value set (CLD) --> 
+  <include>  <!-- 1..* Include one or more codes from a code system or other value set(s) -->
+   <system value="http://fhir.scwjxx.cn/Sichuan/CodeSystem/specimen-type"/><!-- ?? 0..1 The system the codes come from --> 
+  </include>
+  <exclude><!-- ?? 0..* Content as for ValueSet.compose.include Explicitly exclude codes from a code system or other value sets --></exclude>
+ </compose>
+</ValueSet>
