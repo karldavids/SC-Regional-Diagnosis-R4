@@ -5,4 +5,4 @@
 
 ## 在线指南 
 
-http://build.fhir.org/ig/HL7China/SC-Regional-Diagnosis-R4    为本项目构建的在线指南的开发版本。正式发布版本尚未发布。
+http://build.fhir.org/ig/HL7China/SC-Regional-Diagnosis-R4     为本项目构建的在线指南的开发版本。正式发布版本尚未发布。
